@@ -18,11 +18,13 @@
             </li>
           {%- endfor -%}
         </ul>
+        
         <!-- 다크모드 전환 버튼 시작-->
         <button class="themeChanger" type="button">
           <i class="fa-solid fa-moon"></i>
         </button>
         <!-- 다크모드 전환 버튼 끝 -->
+
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
