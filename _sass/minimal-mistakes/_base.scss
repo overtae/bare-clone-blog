@@ -159,6 +159,7 @@ pre {
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 
+  code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 0.8em;
@@ -170,6 +171,7 @@ pre {
     letter-spacing: -0.2em;
     content: "\00a0"; /* non-breaking space*/
   }
+}
 
   .line-number {
     display: block;
