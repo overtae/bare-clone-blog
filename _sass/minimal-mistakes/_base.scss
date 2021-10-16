@@ -159,6 +159,13 @@ pre {
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 
+  display: block;
+  margin-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size: 0.8rem;
+  background-color: $code-background-color;
+  border: none;
+
   code {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
