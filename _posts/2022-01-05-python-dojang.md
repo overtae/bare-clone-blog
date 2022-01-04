@@ -8,17 +8,19 @@ tags:
   - 코딩 도장
 ---
 
-> 3.7 연습문제 : 다음 소스 코드를 완성하여 'Hello, world!'와 'Python Programming'이 각 줄에 출력되게 만드세요. 
+<div class="notice" markdown="1">
+3.7 연습문제 : 다음 소스 코드를 완성하여 'Hello, world!'와 'Python Programming'이 각 줄에 출력되게 만드세요. 
 
 ```python
 print('Hello, world!')
 print(_______________)
 ```
+</div>
 
-<div class="notice" markdown="1">
+<div class="notice--success" markdown="1">
 **풀이** 
 
-```python
+```
 'Python Programming'
 ```
 </div>
