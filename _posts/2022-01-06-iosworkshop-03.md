@@ -1,6 +1,6 @@
 ---
 title: "[Swift 문법 정리] 형 변환"
-date: 2022-01-05
+date: 2022-01-06
 categories:
   - Swift
 tags:
@@ -59,7 +59,9 @@ let myControl = myButton as UIControl
 <summary>UIButton과 UIButton의 자세한 계층뷰를 알고싶다면?</summary>
 <div markdown="1">       
 
-<iframe src='https://www.xmind.net/embed/9TFEaz/' width='750' height='1000' frameborder='0' scrolling='no' allowfullscreen="true"></iframe>
+![계층뷰]({{ site.url }}{{ site.baseurl }}/assets/images/uikithierarchy.jfif){: .align-center}
+
+더 자세한 계층뷰 : [https://www.xmind.net/m/9TFEaz/#](https://www.xmind.net/m/9TFEaz/#)
 
 </div>
 </details>
