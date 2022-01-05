@@ -1,13 +1,13 @@
 ---
-title: "[Swift 문법 정리] 클래스, 객체, 인스턴스"
+title: "[Swift 문법 정리] 형 변환"
 date: 2022-01-05
 categories:
   - Swift
 tags:
   - swift
-  - optional
-  - 옵셔널
-  - 옵셔널 바인딩
+  - 클래스
+  - 객체
+  - 인스턴스
 toc: true
 toc_label: "목차"
 toc_icon: bars
@@ -15,6 +15,8 @@ toc_sticky: true
 ---
 
 ### 클래스, 객체, 인스턴스
+
+---
 
 <div class="mermaid">
     graph TD;
@@ -28,7 +30,56 @@ toc_sticky: true
 
 위 다이어그램을 보면 알 수 있듯이, 클래스로부터 만들어진 객체를 인스턴스라 한다.
 
+### 형 변환(type casting)
 
+---
+
+상속 관계가 있는 클래스들끼리만 타입 캐스팅이 가능하다.
+
+#### as로 upcasting
+
+<center>
+    <div class="mermaid">
+        graph TD;
+            A[부모] <-- |upcasting| B[자식]
+    </div>
+</center>
+
+`자식인스턴스 as 부모클래스`를 이용해 자식 인스턴스를 부모 클래스의 객체로 변환한다.
+
+자식 인스턴스(부모로부터 상속받아 더 많은 것을 가지고 있다.)를 부모 클래스로 캐스팅(업캐스팅)하는 것은 성공할 것이기 때문에 보장된 변환(guaranteed conversion)이다.
+
+```swift
+let myButton : UIButton = UIButton()
+let myControl = myButton as UIControl
+// UIButton은 UIControl의 자식 클래스이므로 안전하게 형 변환이 된다.
+```
+
+<details>
+<summary>UIButton과 UIButton의 자세한 계층뷰를 알고싶다면?</summary>
+<div markdown="1">       
+
+<iframe src='https://www.xmind.net/embed/9TFEaz/' width='750' height='1000' frameborder='0' scrolling='no' allowfullscreen="true"></iframe>
+
+</div>
+</details>
+
+#### as! as?로 downcasting
+
+<center>
+    <div class="mermaid">
+        graph TD;
+            A[부모] --> |downcasting| B[자식]
+    </div>
+</center>
+
+`부모인스턴스 as! 자식클래스`나 `부모인스턴스 as? 자식클래스`를 이용해 부모 인스턴스를 자식 클래스로 변환한다.
+
+성공 확신이 있다면 변환 실패시 crash가 나는 `as!`를 사용하여 강제 변환(forced conversion)을 하면 된다.
+
+성공 확신이 없을 경우 변환 실패시 nil을 리턴하는 `as?`를 사용하여 안전하게 변환하면 된다.
+
+즉, `as!`는 일반 타입으로 반환되고 `as?`는 옵셔널 타입으로 반환된다.
 
 
 **Notice:** 이 게시물은 Smile Han님의 유튜브를 참고하였습니다.
