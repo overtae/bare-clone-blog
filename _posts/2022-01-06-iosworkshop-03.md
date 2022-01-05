@@ -41,7 +41,7 @@ toc_sticky: true
 <center>
     <div class="mermaid">
         graph TD;
-            A[부모] <|-- |upcasting| B[자식]
+            [부모] <-- |upcasting| [자식]
     </div>
 </center>
 
@@ -83,6 +83,19 @@ let myControl = myButton as UIControl
 
 즉, `as!`는 일반 타입으로 반환되고 `as?`는 옵셔널 타입으로 반환된다.
 
+### 타입 검사 is
+
+지정된 객체가 해당 클래스의 인스턴스인지 검사하는 키워드이다.
+
+```swift
+class Man { }
+var chulsu : Man = Man()
+if chulsu is Man {
+    // chulsu가 Man의 인스턴스일 때 실행된다.
+}
+```
+
+위와 같이 `인스턴스 is 클래스` 형식으로 사용하면 된다.
 
 **Notice:** 이 게시물은 Smile Han님의 유튜브를 참고하였습니다.
 [https://www.youtube.com/channel/UCM8wseo6DkA-D7yGlCrcrwA](https://www.youtube.com/channel/UCM8wseo6DkA-D7yGlCrcrwA)
