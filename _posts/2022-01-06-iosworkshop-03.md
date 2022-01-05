@@ -1,5 +1,5 @@
 ---
-title: "[Swift 문법 정리] 형 변환"
+title: "[Swift 문법 정리] 형 변환과 타입 검사"
 date: 2022-01-06
 categories:
   - Swift
@@ -8,6 +8,8 @@ tags:
   - 클래스
   - 객체
   - 인스턴스
+  - as
+  - is
 toc: true
 toc_label: "목차"
 toc_icon: bars
@@ -56,7 +58,7 @@ let myControl = myButton as UIControl
 ```
 
 <details>
-<summary>UIButton과 UIButton의 자세한 계층뷰를 알고싶다면?</summary>
+<summary>[클릭] UIButton과 UIButton의 자세한 계층뷰</summary>
 <div markdown="1">       
 
 ![계층뷰]({{ site.url }}{{ site.baseurl }}/assets/images/uikithierarchy.jfif){: .align-center}
@@ -84,6 +86,8 @@ let myControl = myButton as UIControl
 즉, `as!`는 일반 타입으로 반환되고 `as?`는 옵셔널 타입으로 반환된다.
 
 ### 타입 검사 is
+
+---
 
 지정된 객체가 해당 클래스의 인스턴스인지 검사하는 키워드이다.
 
