@@ -127,7 +127,7 @@ if x != nil {
 ```
 
 <div class="notice--danger" markdown="1">
-**Caution:** `if x!=nil` 또는 `if x!= nil`이라 썼을 경우 `<span style="color:red">error:</span> 'nil' cannot be assigned to type 'Int'`라는 에러가 나게 된다. 간격에 주의하도록 하자.
+**Caution:** `if x!=nil` 또는 `if x!= nil`이라 썼을 경우 <code><span style="color:red">error:</span> 'nil' cannot be assigned to type 'Int'</code>라는 에러가 나게 된다. 간격에 주의하도록 하자.
 </div>
 
 #### 옵셔널 강제 언래핑 2: 옵셔널 바인딩(optional binding)
