@@ -176,6 +176,7 @@ let y : Double? = 1.0
 let z : String? = "Hi"
 
 if let xx = x, let yy = y, let zz = z { // 모든 상수가 nil이 아니어야 한다.
+// 콤마(,)는 &&를 의미한다.
     print(xx, yy, zz)
     print(x, y, z)
 } else {
@@ -185,7 +186,7 @@ if let xx = x, let yy = y, let zz = z { // 모든 상수가 nil이 아니어야 
 // Optional(5) Optional(1.0) Optional("Hi")
 ```
 
-주의해야 할 점은 모든 변수나 상수가 nil이 아니어야 한다는 것이다.
+주의해야 할 점은 하나라도 nil일 경우 if문 실행이 안된다는 점이다.
 
 
 **Notice:** 이 게시물은 Smile Han님의 유튜브를 참고하였습니다.
