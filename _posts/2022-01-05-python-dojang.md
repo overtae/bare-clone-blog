@@ -47,7 +47,7 @@ print('Hello, world!')
 > Unit 5 문제 풀이
 
 <div class="notice--danger" markdown="1">
-**5.5 연습문제:** 
+**5.5 연습 문제:** 
 
 국립환경과학원에서는 아파트에서 소음이 가장 심한 층수를 구하는 계산식을 발표했습니다.<br>
 소음이 가장 심한 층은 0.2467 * 도로와의 거리(m) + 4.159입니다.<br>
@@ -197,9 +197,30 @@ print(hour, minute, second, ________)
 `sep = ':'`
 </div>
 
+<div class="notice--danger" markdown="1">
+**7.5 심사 문제:** 
 
+표준 입력으로 년, 월, 일, 시, 분, 초가 입력됩니다.<br>
+다음 소스 코드를 완성하여 입력된 날짜와 시간을 년-월-일T시:분:초 형식으로 출력되게 만드세요.
 
+```python
+year, month, day, hour, minute, second = input().split()
 
+_______________________________________
+print(hour, minute, second, sep=':')
+# 입력 : 1999 12 31 10 37 21
+# 결과 : 1999-12-31ㅆ10:37:21
+```
+</div>
+
+<div class="notice" markdown="1">
+**풀이** 
+
+```python
+print(year, month, day, sep='-', end='T')
+```
+처음에 `sep:'-'` 이렇게 적었다. 꼭 등호를 사용하자..
+</div>
 
 **Notice:** 이 게시물은 파이썬 코딩 도장 사이트를 참고하였습니다.
 [https://dojang.io/course/view.php?id=7](https://dojang.io/course/view.php?id=7)
