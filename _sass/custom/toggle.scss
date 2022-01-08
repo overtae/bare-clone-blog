@@ -1,27 +1,5 @@
 /* Dark / Light Mode Togle Switch */
 
-
-.overtaeThemeSwitch
-{
-    position: relative;
-    background: var(--black);
-    color: var(--white);
-    cursor: pointer;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.4s ease;
-}
-
-.overtaeThemeSwitch::before
-{
-    content: '\f186';
-    font-family: fontAwesome;
-}
-
-
-/*
 .mh_toogle {
     display: none;
     + .mh_toggle_btn {
@@ -66,4 +44,3 @@
         }
     }
 }
-*/
