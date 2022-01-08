@@ -3,6 +3,7 @@
 
 .overtaeThemeSwitch
 {
+    position: relative;
     background: var(--black);
     color: var(--white);
     cursor: pointer;
@@ -10,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease;
 }
 
 .overtaeThemeSwitch::before
