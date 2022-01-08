@@ -40,13 +40,10 @@ toc_sticky: true
 
 #### as로 upcasting
 
-<center>
-    <div class="mermaid">
-        graph TD;
-            [부모] <-- |upcasting| [자식]
-    </div>
-
-</center>
+<div class="mermaid" align="center">
+    graph TD;
+        [부모] <-- |upcasting| [자식]
+</div>
 
 `자식인스턴스 as 부모클래스`를 이용해 자식 인스턴스를 부모 클래스의 객체로 변환한다.
 
