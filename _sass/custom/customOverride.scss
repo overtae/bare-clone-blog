@@ -1,3 +1,12 @@
+@charset "utf-8";
+
+
+@import "minimal-mistakes/skins/default"; // skin
+@import "minimal-mistakes"; // main partials
+
+@import "custom/customOverride.scss";
+
+
 @import "./toggle.scss";
 @import "./summary.scss";
 /* ... */
