@@ -42,8 +42,8 @@ toc_sticky: true
 
 <center>
     <div class="mermaid">
-        graph TD;
-            A[부모] <-- |upcasting| B[자식]
+        graph BT
+            A[자식] --> |upcasting| B[부모]
     </div> 
 </center>
 
