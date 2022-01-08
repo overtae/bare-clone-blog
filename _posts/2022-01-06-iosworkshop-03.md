@@ -45,6 +45,7 @@ toc_sticky: true
         graph TD;
             [부모] <-- |upcasting| [자식]
     </div>
+
 </center>
 
 `자식인스턴스 as 부모클래스`를 이용해 자식 인스턴스를 부모 클래스의 객체로 변환한다.
