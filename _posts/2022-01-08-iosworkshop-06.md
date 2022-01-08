@@ -1,4 +1,5 @@
 ---
+layout: wide
 title: "[Swift 문법 정리] 제어문"
 date: 2022-01-08
 categories:
@@ -48,10 +49,10 @@ for animal in myAnimal {
 ```
 
 <div class="notice--primary" markdown="1">
-**terminator가 뭘까?**
-
-print()가 끝날 때 무엇으로 마칠지를 정해주는 인자로 기본값이 개행(\n)으로 되어있다. 그렇기 때문에 따로 써주지 않는다면 위의 소스는 총 4줄로 출력이 될 것이다. 위에선 이를 공백(" ")으로 바꿔주었기 때문에 한 줄로 출력이 되었다. print() 함수에 관한 자세한 설명은 [developer.apple.com](https://developer.apple.com/documentation/swift/1541053-print) 사이트를 참고하면 된다.
+**terminator가 뭘까?** print()가 끝날 때 무엇으로 마칠지를 정해주는 인자로 기본값이 개행(\n)으로 되어있다. 그렇기 때문에 따로 써주지 않는다면 위의 소스는 총 4줄로 출력이 될 것이다. 위에선 이를 공백(" ")으로 바꿔주었기 때문에 한 줄로 출력이 되었다. print() 함수에 관한 자세한 설명은 [developer.apple.com](https://developer.apple.com/documentation/swift/1541053-print) 사이트를 참고하면 된다.
 </div>
+
+
 
 
 
