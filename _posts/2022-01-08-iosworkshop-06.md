@@ -1,5 +1,6 @@
 ---
-layout: wide
+classes: wide
+author_profile: true
 title: "[Swift 문법 정리] 제어문"
 date: 2022-01-08
 categories:
