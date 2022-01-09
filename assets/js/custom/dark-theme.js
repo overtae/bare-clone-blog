@@ -1,6 +1,6 @@
 /* assets/js/custom/dark-theme.js */
-const defaultTheme = [...document.styleSheets].find(style => /(main.scss)$/.test(style.href));
-const darkTheme = [...document.styleSheets].find(style => /(main_dark.scss)$/.test(style.href));
+const defaultTheme = [...document.styleSheets].find(style => /(main.css)$/.test(style.href));
+const darkTheme = [...document.styleSheets].find(style => /(main_dark.css)$/.test(style.href));
 
 let setDarkMode = (isDark) => {
     darkTheme.disabled = isDark !== true;
