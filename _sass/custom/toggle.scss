@@ -33,7 +33,6 @@
         background: lightgray;
         &:after {
             left: 0;
-            font-family: fontAwesome;
             content: "brightness_7";
         }
     }
@@ -42,7 +41,6 @@
         background: gray;
         &:after {
             left: 50%;
-            font-family: fontAwesome;
             content: "brightness_4";
         }
     }
