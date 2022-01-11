@@ -290,7 +290,7 @@ defaults:
       comments: true
       share: true
       related: true
-  # _docs
+  # _autolayout
   - scope:
       path: ""
       type: autolayout
@@ -301,5 +301,5 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "Auto Layout"
+        nav: "autolayout"
 
