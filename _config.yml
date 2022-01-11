@@ -271,6 +271,12 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  autolayout:
+    output: true
+    permalink: /:collection/:path/
+
 # Defaults
 defaults:
   # _posts
@@ -284,3 +290,16 @@ defaults:
       comments: true
       share: true
       related: true
+  # _docs
+  - scope:
+      path: ""
+      type: autolayout
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
+      sidebar:
+        nav: "Auto Layout"
+
