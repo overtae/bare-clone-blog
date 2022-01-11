@@ -75,5 +75,3 @@ if문에서는 `a -= 3000` 이런식으로 계산만 하고 나중에 값을 출
 **Notice:** 이 게시물은 파이썬 코딩 도장 사이트를 참고하였습니다.
 [https://dojang.io/course/view.php?id=7](https://dojang.io/course/view.php?id=7)
 {: .notice--info}
-
-success danger warning
