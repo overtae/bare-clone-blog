@@ -276,6 +276,12 @@ collections:
   autolayout:
     output: true
     permalink: /:collection/:path/
+  web:
+    output: true
+    permalink: /:collection/:path/
+  python:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -302,4 +308,23 @@ defaults:
       comments: true
       sidebar:
         nav: "autolayout"
-
+  # web
+  - scope:
+      path: ""
+      type: web
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
+  # python
+  - scope:
+      path: ""
+      type: python
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
