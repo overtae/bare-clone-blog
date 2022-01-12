@@ -16,5 +16,7 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Posts"
+  - title: "By Year"
     url: /posts/
+  - title: "All Posts"
+    url: /all-posts/
