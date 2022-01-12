@@ -282,6 +282,12 @@ collections:
   python:
     output: true
     permalink: /:collection/:path/
+  iosapp:
+    output: true
+    permalink: /:collection/:path/
+  swift:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -320,6 +326,26 @@ defaults:
   - scope:
       path: ""
       type: python
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
+  # iosapp
+  - scope:
+      path: ""
+      type: iosapp
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
+  # swift
+  - scope:
+      path: ""
+      type: swift
     values:
       layout: single
       read_time: false
