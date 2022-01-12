@@ -12,9 +12,11 @@ main:
   #   url: /sitemap/
   # - title: "About"
   #   url: /about/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "By Year"
-    url: /posts/
+  # - title: "Categories"
+  #  url: /categories/
+  # - title: "Tags"
+  #  url: /tags/
+  # - title: "By Year"
+  #  url: /posts/
+  - title: "Posts"
+    url: /collection-archive/
