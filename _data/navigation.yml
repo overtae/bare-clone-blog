@@ -18,5 +18,3 @@ main:
     url: /tags/
   - title: "By Year"
     url: /posts/
-  - title: "All Posts"
-    url: /all-posts/
