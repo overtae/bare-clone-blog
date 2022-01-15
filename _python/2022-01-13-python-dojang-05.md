@@ -10,7 +10,7 @@ excerpt: for 반복문 사용하기
 ---
 
 <div class="notice--success" markdown="1">
-**14.6 연습 문제 :**
+**16.5 연습 문제 :**
 
 다음 소스 코드를 완성하여 리스트 x에 들어있는 각 숫자(요소)에 10을 곱한 값이 출력되게 만드세요.<br>
 모든 숫자는 공백으로 구분하여 한 줄로 출력되어야 합니다.
@@ -33,7 +33,7 @@ for i in x:
 </div>
 
 <div class="notice--success" markdown="1">
-**14.7 심사 문제 :**
+**16.6 심사 문제 :**
 
 표준 입력으로 정수가 입력됩니다.<br>
 입력된 정수의 구구단을 출력하는 프로그램을 만드세요.<br>
@@ -62,14 +62,14 @@ x = int(input())
 for i in range(1, 10):
   print(x, '*', i, '=', x * i)
 ```
-`*` 양 옆 공간은 한 칸씩 띄우는 게 좋을 것 같다.
+처음엔 `x*i`라 적었지만, `*` 양 옆 공간은 한 칸씩 띄우는 게 좋을 것 같다.
 </div>
 
 <details>
 <summary>PEP 8 - Whitespace in operators</summary>
 <div markdown="1">       
 
-If operators with different priorities are used, consider adding whitespace around the operators with the lowest priority(ies).
+`If operators with different priorities are used, consider adding whitespace around the operators with the lowest priority(ies).`
 
 ```python
 # Correct:

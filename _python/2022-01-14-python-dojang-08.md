@@ -10,7 +10,7 @@ excerpt: 계단식으로 별 출력하기
 ---
 
 <div class="notice--success" markdown="1">
-**14.6 연습 문제 :**
+**19.5 연습 문제 :**
 
 
 </div>
@@ -22,7 +22,7 @@ excerpt: 계단식으로 별 출력하기
 </div>
 
 <div class="notice--success" markdown="1">
-**14.7 심사 문제 :**
+**19.6 심사 문제 :**
 
 
 </div>

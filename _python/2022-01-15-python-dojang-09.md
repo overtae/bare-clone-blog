@@ -10,7 +10,7 @@ excerpt: FizzBuzz 문제
 ---
 
 <div class="notice--success" markdown="1">
-**14.6 연습 문제 :**
+**20.7 연습 문제 :**
 
 
 </div>
@@ -22,7 +22,7 @@ excerpt: FizzBuzz 문제
 </div>
 
 <div class="notice--success" markdown="1">
-**14.7 심사 문제 :**
+**20.8 심사 문제 :**
 
 
 </div>
