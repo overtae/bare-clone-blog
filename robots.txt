@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: http://overtae.github.io/blog/sitemap.xml
+
+Sitemap: https://overtae.github.io/blog/sitemap.xml
