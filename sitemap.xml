@@ -53,7 +53,7 @@ layout : null
   {% endfor %}
   {% for collection in site.collections %}
     <url>
-      <loc>{{ site.url }}{{ collection.url }}</loc>
+      <loc>{{ site.url }}{{ collection.path }}</loc>
       {% if collection.sitemap.lastmod %}
         <lastmod>{{ collection.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% elsif collection.date %}
