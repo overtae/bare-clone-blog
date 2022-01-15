@@ -6,6 +6,7 @@ categories:
 tags:
   - python
   - 코딩 도장
+excerpt: 반복문에 break, continue 사용하기
 ---
 
 <div class="notice--success" markdown="1">

@@ -6,6 +6,7 @@ categories:
 tags:
   - python
   - 코딩 도장
+excerpt: 계단식으로 별 출력하기
 ---
 
 <div class="notice--success" markdown="1">

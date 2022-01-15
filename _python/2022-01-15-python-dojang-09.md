@@ -6,6 +6,7 @@ categories:
 tags:
   - python
   - 코딩 도장
+excerpt: FizzBuzz 문제
 ---
 
 <div class="notice--success" markdown="1">

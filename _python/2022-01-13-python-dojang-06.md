@@ -6,6 +6,7 @@ categories:
 tags:
   - python
   - 코딩 도장
+excerpt: while 반복문 사용하기
 ---
 
 <div class="notice--success" markdown="1">
