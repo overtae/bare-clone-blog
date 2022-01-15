@@ -72,6 +72,5 @@ layout : null
         <priority>0.3</priority>
       {% endif %}
     </url>
-    {% endunless %}
   {% endfor %}
 </urlset>
