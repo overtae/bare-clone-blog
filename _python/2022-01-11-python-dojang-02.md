@@ -6,6 +6,7 @@ categories:
 tags:
   - python
   - 코딩 도장
+excerpt: if 조건문 사용하기
 ---
 
 <div class="notice--success" markdown="1">
