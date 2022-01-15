@@ -26,7 +26,31 @@ layout: null
         {% else %}
         <priority>{{ post.sitemap.priority }}</priority>
         {% endif %}
+    
+    </url>
+    {% endfor %}
 
+    {% for collection in site.collections %}
+    <url>
+        <loc>{{ site.url }}{{ collection.url }}</loc>
+        {% if collection.lastmod == null %}
+        <lastmod>{{ collection.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ collection.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
+
+        {% if collection.sitemap.changefreq == null %}
+        <changefreq>weekly</changefreq>
+        {% else %}
+        <changefreq>{{ collection.sitemap.changefreq }}</changefreq>
+        {% endif %}
+
+        {% if collection.sitemap.priority == null %}
+        <priority>0.5</priority>
+        {% else %}
+        <priority>{{ collection.sitemap.priority }}</priority>
+        {% endif %}
+    
     </url>
     {% endfor %}
 </urlset>
