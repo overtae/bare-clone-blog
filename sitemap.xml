@@ -50,6 +50,5 @@ layout : null
       {% endif %}
     </url>
     {% endunless %}
-  {% endfor %
-
+  {% endfor %}
 </urlset>
