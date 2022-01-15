@@ -51,26 +51,5 @@ layout : null
     </url>
     {% endunless %}
   {% endfor %
-  {% for collection in site.collections %}
-    <url>
-      <loc>{{ site.url }}{{ collection.label }}{{ url }}.html</loc>
-      {% if collection.sitemap.lastmod %}
-        <lastmod>{{ collection.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif collection.date %}
-        <lastmod>{{ collection.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if collection.sitemap.changefreq %}
-        <changefreq>{{ collection.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
-      {% endif %}
-      {% if collection.sitemap.priority %}
-        <priority>{{ collection.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.3</priority>
-      {% endif %}
-    </url>
-  {% endfor %}
+
 </urlset>
