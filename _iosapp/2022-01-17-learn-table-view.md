@@ -137,6 +137,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 ```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell.init(style: .default, reuseIdentifier: "myCell")
+    // .init은 생략해도 무관하다.
     cell.textLabel?.text = "\(indexPath.row)"
     return cell
 }
@@ -166,13 +167,48 @@ override func viewDidLoad() {
 
 앞에서 numberOfRowsInSection의 값을 5로 주었기 때문에 4까지 나온걸 확인할 수 있다.
 
-#### style?
+##### style?
 
 ![cell style]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/cellstyle.png){: .align-center}
 
 셀의 디자인을 지정한다.
 
 총 네 가지의 디자인이 있으며 위의 이미지를 보면 각각의 특징을 알 수 있다.
+
+##### cell.textLabel?.text
+
+textLabel은 옵셔널형으로 default 스타일에서 제공하는 프로퍼티이다.
+
+#### section 수 지정해보기
+
+```swift
+func numberOfSections(in tableView: UITableView) -> Int {
+    return 2
+}
+```
+
+![screen]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/screen3.png){: .align-center}
+
+실행 화면을 보면 지정해준 행의 개수만큼 반복이 되는 걸 볼 수 있다.
+
+#### indexPath 알아보기
+
+```swift
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: "myCell")
+    cell.textLabel?.text = "\(indexPath.row)"
+    cell.detailTextLabel?.text = indexPath.description
+    return cell
+}
+```
+
+섹션의 수를 2로 지정해주고 위와 같이 입력한다면 결과는 어떻게 나오게 될까
+
+![screen]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/screen4.png){: .align-center}
+
+실행 화면을 보면 [`섹션의 번호`, `셀의 번호`]의 형태를 갖고있다.
+
+즉, indexPath는 각 섹션과 셀의 정보를 갖고있다.
 
 **Notice:** 이 게시물은 [Smile Han](https://www.youtube.com/watch?v=F5WhaFcK9sg&list=PLJqaIeuL7nuF9UoSxZLxIl3GC5WmeMSSU&index=52 "Smile Han님 유튜브")님의 유튜브를 참고하였습니다.
 {: .notice--info}
