@@ -9,7 +9,6 @@ tags:
   - swift
   - iOS
   - table view
-exerpt: 
 toc: true
 toc_label: "목차"
 toc_icon: bars
@@ -240,7 +239,7 @@ imageView가 옵셔널 형이기 때문에 `...png")`뒤에 `!`기호를 써주�
 
 ---
 
-![add cell]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/suctomcell1.png){: .align-center}
+![add cell]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell1.png){: .align-center}
 
 스토리 보드에서 테이블 뷰에 table view cell을 추가해주면 prototype cells가 나온다.
 
@@ -250,11 +249,12 @@ imageView가 옵셔널 형이기 때문에 `...png")`뒤에 `!`기호를 써주�
 
 Cocoas Touch Class를 이용해 UITableViewCell을 부모 클래스로 하는 자식 클래스를 하나 만든다.
 
-![create file]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell1.png){: .align-center}
+![create file]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/srbclass.png){: .align-center}
 
 클래스를 만들었다면 커스텀 해줄 셀과 연결해준다.
 
 ![link class]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell2.png){: .align-center}
+
 
 #### 커스텀한 cell 적용하기
 
