@@ -9,6 +9,7 @@ tags:
   - swift
   - iOS
   - table view
+exerpt: 
 toc: true
 toc_label: "목차"
 toc_icon: bars
@@ -193,8 +194,6 @@ textLabel은 옵셔널형으로 default 스타일에서 제공하는 프로퍼�
 
 #### section 수 지정해보기
 
----
-
 ```swift
 func numberOfSections(in tableView: UITableView) -> Int {
     return 2
@@ -289,6 +288,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 ### cell이 선택되었을 때 반응하기
 
+---
+
 ```swift
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print(indexPath)
@@ -296,7 +297,6 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 ```
 
 위의 소스를 추가해주면 셀이 선택되었을 때 콘솔창에 해당 셀의 indexPath가 나오게 된다.
-
 
 **Notice:** 이 게시물은 [Smile Han](https://www.youtube.com/watch?v=F5WhaFcK9sg&list=PLJqaIeuL7nuF9UoSxZLxIl3GC5WmeMSSU&index=52 "Smile Han님 유튜브")님의 유튜브를 참고하였습니다.
 {: .notice--info}
