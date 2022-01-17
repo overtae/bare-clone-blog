@@ -1,0 +1,102 @@
+<figure class="highlight">
+<span class="code-pil">
+<i class="fa fa-code font-weight-bold" aria-hidden="true"></i> 
+HTML</span>
+<pre>
+<code class="language-html" data-lang="html">
+<span class="nt">&lt;link</span> 
+<span class="na">rel=</span>
+<span class="s">"stylesheet"</span> 
+<span class="na">href=</span>
+<span class="s">"/font-awesome/css/font-awesome.css"</span>
+<span class="nt">&gt;</span>
+</code>
+</pre>
+</figure>
+
+
+
+
+
+
+figure.highlight {
+    background: #111;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(17, 17, 17);
+    border: none;
+    border-top-color: initial;
+    border-top-style: none;
+    border-top-width: initial;
+    border-right-color: initial;
+    border-right-style: none;
+    border-right-width: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: initial;
+    border-left-color: initial;
+    border-left-style: none;
+    border-left-width: initial;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 50%);
+}
+figure.highlight {
+    padding: 1.5rem 1rem;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    border: 5px double #addaaf;
+    position: relative;
+}
+
+
+
+-0------------------------------------------------------------
+
+
+
+
+
+figure.highlight .code-pil {
+    position: absolute;
+    top: -0.7rem;
+    background: #111;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(17, 17, 17);
+    padding: 0 10px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    color: #66bb6a;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

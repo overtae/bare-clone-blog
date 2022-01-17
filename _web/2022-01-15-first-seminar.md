@@ -11,20 +11,5 @@ tags:
 excerpt: 기본 태그들을 활용한 게임 속 캐릭터의 기술 설명 페이지
 ---
 
-```python
-x, y = map(int, input().split())
-for i in range(x, y + 1):
-  if i % 5 == 0 and i % 7 == 0:
-    print('FizzBuzz')
-  elif i % 5 == 0:
-    print('Fizz')
-  elif i % 7 == 0:
-    print('Buzz')
-  else:
-    print(i)
-^
-# 단축
-for i in range(x, y + 1):
-    print('Fizz' * (i % 5 == 0) + 'Buzz' * (i % 7 == 0) or i)
-```
+
 
