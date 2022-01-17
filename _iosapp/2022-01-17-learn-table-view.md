@@ -43,6 +43,12 @@ toc_sticky: true
 
 Table View Controller를 사용하면 편하지만 이번 포스트에선 기능에 대해 자세히 알아보기 위해 Table View를 사용할 것이다.
 
+테이블 뷰의 인스펙터를 보면 Content에 Dynamic Prototypes와 Static Cells옵션이 있는데 이게 무엇일까?
+
+- Dynamic Prototypes : 정해진 길이 없이 계속 늘어난다.
+
+- Static Cells : 정해진 길이 만큼만 보여준다.
+
 ![add table view]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/addTableView.png){: .align-center}
 
 일반적으로 테이블 뷰는 화면을 꽉 채우므로 leading, top, trailing, bottom 제약을 모두 0으로 주었다.
@@ -51,7 +57,9 @@ Table View Controller를 사용하면 편하지만 이번 포스트에선 기능
 
 어시스턴트 에디터를 열어 소스 파일과 테이블 뷰를 연결시켜 주었다.
 
-#### 프로토콜 채택과 준수
+### 프로토콜 채택과 준수
+
+---
 
 ```swift
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -132,7 +140,11 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 여러 줄의 회색 선을 볼 수 있다.
 
-#### UITableViewCell의 생성자 활용하기
+### UITableViewCell 알아보기
+
+---
+
+#### 생성자 활용
 
 ```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -167,7 +179,7 @@ override func viewDidLoad() {
 
 앞에서 numberOfRowsInSection의 값을 5로 주었기 때문에 4까지 나온걸 확인할 수 있다.
 
-##### style?
+> style?
 
 ![cell style]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/cellstyle.png){: .align-center}
 
@@ -175,11 +187,13 @@ override func viewDidLoad() {
 
 총 네 가지의 디자인이 있으며 위의 이미지를 보면 각각의 특징을 알 수 있다.
 
-##### cell.textLabel?.text
+> cell.textLabel?.text
 
 textLabel은 옵셔널형으로 default 스타일에서 제공하는 프로퍼티이다.
 
 #### section 수 지정해보기
+
+---
 
 ```swift
 func numberOfSections(in tableView: UITableView) -> Int {
@@ -209,6 +223,80 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 실행 화면을 보면 [`섹션의 번호`, `셀의 번호`]의 형태를 갖고있다.
 
 즉, indexPath는 각 섹션과 셀의 정보를 갖고있다.
+
+#### 셀에 이미지 넣기
+
+```swift
+cell.imageView?.image = UIImage(named: "sun.png")
+```
+
+imageView가 옵셔널 형이기 때문에 `...png")`뒤에 `!`기호를 써주는 것이 좋다.
+{: .notice--primary}
+
+위의 소스를 추가하면 셀 안에 이미지를 넣을 수 있다.
+
+![screen]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/screen5.png){: .align-center}
+
+### 셀 커스텀하기
+
+---
+
+![add cell]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/suctomcell1.png){: .align-center}
+
+스토리 보드에서 테이블 뷰에 table view cell을 추가해주면 prototype cells가 나온다.
+
+이 prototype cells를 자신이 원하는 대로 커스텀해주면 된다.
+
+#### cell 관리할 클래스 만들기
+
+Cocoas Touch Class를 이용해 UITableViewCell을 부모 클래스로 하는 자식 클래스를 하나 만든다.
+
+![create file]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell1.png){: .align-center}
+
+클래스를 만들었다면 커스텀 해줄 셀과 연결해준다.
+
+![link class]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell2.png){: .align-center}
+
+#### 커스텀한 cell 적용하기
+
+![add label]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell3.png){: .align-center}
+
+간단하게 꾸며보았다.
+
+이 상태로 시뮬레이터를 실행해 보면 커스텀한 셀이 적용되지 않을 것이다.
+
+적용되게 하려면 먼저 레이블과 클래스를 연결시켜야 한다.
+
+![link label]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell4.png){: .align-center}
+
+어시스턴트 에디터를 사용해 연결해준다.
+
+그리고 ViewController.swift파일을 아래와 같이 수정해준다.
+
+```swift
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taeCell", for: indexPath) as! taeTableViewCell
+        // Table View Cell의 인스펙터 창에서 설정해준 Identifier를 써주어야 한다.
+        // 부모에서 자식의 Label에 접근이 불가하다.
+        // 다운캐스팅을 통해 taeTableViewCell형으로 바꿔준다.
+        cell.taeLabel.text = indexPath.description
+        // 다운캐스팅을 해주었기에 taeLabel에 접근이 가능해졌다.
+        return cell
+    }
+```
+
+![screen]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/customcell5.png){: .align-center}
+
+### cell이 선택되었을 때 반응하기
+
+```swift
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print(indexPath)
+}
+```
+
+위의 소스를 추가해주면 셀이 선택되었을 때 콘솔창에 해당 셀의 indexPath가 나오게 된다.
+
 
 **Notice:** 이 게시물은 [Smile Han](https://www.youtube.com/watch?v=F5WhaFcK9sg&list=PLJqaIeuL7nuF9UoSxZLxIl3GC5WmeMSSU&index=52 "Smile Han님 유튜브")님의 유튜브를 참고하였습니다.
 {: .notice--info}
