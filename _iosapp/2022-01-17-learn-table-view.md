@@ -25,7 +25,7 @@ toc_sticky: true
 
 #### UITableView vs. UITableViewController
 
-![UIKit class hierarchy]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/uikit_classes.jpg){: .align-center}
+![UIKit class hierarchy]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/uikit_classes.jpg){: .align-center}
 
 > 상단 이미지는 [developer.apple.com](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/WhatIsCocoa/WhatIsCocoa.html#//apple_ref/doc/uid/TP40002974-CH3-SW10) 사이트에 나와있다.
 
@@ -37,17 +37,17 @@ toc_sticky: true
 
 ---
 
-![in strybord]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/tableThree.png){: .align-center}
+![in strybord]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/tableThree.png){: .align-center}
 
 스토리보드에서 오브젝트를 추가할 때 테이블뷰를 검색하면 위의 3개가 나온다.
 
 Table View Controller를 사용하면 편하지만 이번 포스트에선 기능에 대해 자세히 알아보기 위해 Table View를 사용할 것이다.
 
-![add table view]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/addTableView.png){: .align-center}
+![add table view]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/addTableView.png){: .align-center}
 
 일반적으로 테이블 뷰는 화면을 꽉 채우므로 leading, top, trailing, bottom 제약을 모두 0으로 주었다.
 
-![link table view]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/linkTable.png){: .align-center}
+![link table view]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/linkTable.png){: .align-center}
 
 어시스턴트 에디터를 열어 소스 파일과 테이블 뷰를 연결시켜 주었다.
 
@@ -78,7 +78,7 @@ extension ViewController: UITableViewDataSource{ }
 
 > UITableViewDataSource
 
-![error]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/protocolErr.png){: .align-center}
+![error]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/protocolErr.png){: .align-center}
 
 이 프로토콜에는 필수 메소드가 있기 때문에 채택만 해줄 경우 위와 같은 에러가 발생하게 된다.
 
@@ -102,7 +102,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 여기에서 말하는 섹션과 row(행)는 무엇일까?
 
-![row and section]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/rowncell.png){: .align-center}
+![row and section]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/rowncell.png){: .align-center}
 
 섹션은 묶음이라 볼 수 있고 행은 한 줄 한 줄을 말한다.
 
@@ -128,7 +128,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 #### 실행 화면
 
-![screen]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/screen.png){: .align-center}
+![screen]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/screen.png){: .align-center}
 
 여러 줄의 회색 선을 볼 수 있다.
 
@@ -158,15 +158,17 @@ override func viewDidLoad() {
     // table의 delegate과 dataSource를 내 클래스에서 처리할 것이라는 의미
 }
 ```
+</div>
 
-![screen]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/screen2.png){: .align-center}
+![screen]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/screen2.png){: .align-center}
 
 추가해주었다면 위와 같은 실행 화면이 나올 것이다.
-</div>
+
+앞에서 numberOfRowsInSection의 값을 5로 주었기 때문에 4까지 나온걸 확인할 수 있다.
 
 #### style?
 
-![cell style]({{ site.url }}{{ site.baseurl }}/assets/images/autolayout/cellstyle.png){: .align-center}
+![cell style]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/cellstyle.png){: .align-center}
 
 셀의 디자인을 지정한다.
 
