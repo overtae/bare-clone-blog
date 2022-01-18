@@ -183,7 +183,7 @@ cell.imageView?.image = UIImage(named: itemsImageFile[indexPath.row])
 
 ---
 
-![image]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/pracresult.git){: .align-center}
+![image]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/pracresult.gif){: .align-center}
 
 아직 구현이 안된 화면이 많지만 테이블 뷰와 네비게이션 컨트롤러는 정상적으로 작동한다.
 
