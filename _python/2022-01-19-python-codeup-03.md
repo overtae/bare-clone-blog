@@ -1,0 +1,204 @@
+---
+title: "[파이썬 기초 100제] 2강 입출력 - 2"
+date: 2022-01-19
+categories:
+  - Python
+tags:
+  - python
+  - 기초 100제
+  - 코드업
+---
+
+<div class="notice--success" markdown="1">
+**20.**   
+1개의 문자열을 입력받아 그대로 출력해보자.
+</div>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+x = input()
+print(x)
+```
+</div>
+
+<div class="notice--success" markdown="1">
+**22.**   
+공백이 포함되어 있는 한 문장이 입력된다.<br>
+단, 입력되는 문장은 여러 개의 단어로 구성되고, 엔터로 끝난다.
+</div>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+x = input()
+print(x)
+```
+</div>
+
+<div class="notice--warning" markdown="1">
+**23.**   
+실수 1개를 입력받아 정수 부분과 실수 부분으로 나누어 출력한다.<br>
+
+입력 : 1.435867<br>
+출력 :<br>
+1<br>
+435867
+</div>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+# 답
+string = input().split('.')
+print('''\
+{}
+{}
+'''.format(string[0], string[1]))
+# 나의 답
+x = input().split('.')
+print(x[0], x[1], sep='\n')
+```
+답이 틀리진 않았지만 `format()`을 이용하여 좀 더 직관적이게 코드를 짜는게 좋아보인다.
+</div>
+
+<div class="notice--warning" markdown="1">
+**24.**   
+단어를 1개 입력받는다.<br>
+입력받은 단어(영어)의 각 문자를 한줄에 한 문자씩 분리해 출력한다.<br>
+(단, 단어의 문자(영어)를 하나씩 나누어 한 줄에 한 개씩 ' '로 묶어서 출력한다.)<br>
+
+입력 : 'Boy'<br>
+출력 :<br>
+'B'<br>
+'o'<br>
+'y'
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+str도 List와 동일하게 배열과 같은 형식으로 접근가능하다. 
+
+문자열도 리스트와 같이 iterable 객체이기 때문이다.
+
+ex) '문자열'[0] >> '문'
+
+반복문 for()를 이용하여 문자열의 길이만큼 반복한다.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+x = input()
+for i in x:
+    print("'{}'".format(i))
+```
+반복 범위를 `range(len(x))`로 설정하는 방법도 있다.<br>
+이렇게 했을 경우 출력은 `print("'{}'".format(string[i]))`로 해야된다.
+</div>
+
+<div class="notice--warning" markdown="1">
+**25.**   
+다섯 자리의 정수 1개를 입력받아 각 자리별로 나누어 출력한다.<br>
+
+입력 : 75254<br>
+출력 :<br>
+[70000]<br>
+[5000]<br>
+[200]<br>
+[50]<br>
+[4]
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+문자열 연산이 가능함을 잊지 말자.
+
+ex) '문자'*5 >> '문자문자문자문자문자'
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+# 답
+x = input()
+count = len(x)-1
+# 0의 개수는 문자열으 길이보다 하나 적다.
+for i in range(len(x)):
+  print([int(x[i] + '0'*count)])
+  # count로 0의 개수 지정
+  count -= 1
+# 나의 답
+x = input()
+for i in range(5):
+    print('{}{}'.format(x[i], '0' * (4 - i)))
+```
+틀린건 아니지만 내가 적은 답의 경우 5자리 숫자만 가능하다.
+</div>
+
+<div class="notice--success" markdown="1">
+**26.**   
+입력되는 시:분:초 에서 분만 출력해보자.
+</div>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+x = input().split(':')
+print(x[1])
+```
+배열을 이용하지 않고 h, m, s로 나눠 받아 m만 출력하는 방법도 있다.
+</div>
+
+<div class="notice--danger" markdown="1">
+**27.**   
+년월일을 출력하는 방법은 나라마다, 형식마다 조금씩 다르다.<br>
+년월일(yyyy.mm.dd)를 입력받아, 일월년(dd-mm-yyyy)로 출력해보자.<br>
+(단, 한 자리 일/월은 0을 붙여 두자리로 출력한다.)
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+조건문 if-else문을 파이썬의 3항 연산자(Chapter 10 참고) 기능을 이용하면 더 간단하게 작성할 수 있다.
+
+이렇게 작성하는 것이 메모리 효율성면에서도 효과적이다. (18번 참고)
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+# 답
+y, m, d = input().split('.')
+m = '0'+m if len(m) == 1 else m
+d = '0'+d if len(d) == 1 else d
+print('{}-{}-{}'.format(d, m, y))
+# 나의 답
+y, m, d = input().split('.')
+m = len(m) == 1? '0' + m : m
+d = len(d) == 1? '0' + d : d
+print('{}-{}-{}'.format(d, m, y))
+```
+세상에.. 파이썬의 삼항 연산자는 다른 언어와 다르다는 것을 기억하자..
+</div>
+
+**Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.
+{: .notice--info}
