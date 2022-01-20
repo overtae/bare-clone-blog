@@ -215,11 +215,5 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 ![image]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/detail.gif){: .align-center}
 
-
-
-
-
-
-
-
-![image]({{ site.url }}{{ site.baseurl }}/assets/images/iosapp/prac2.png){: .align-center}
+**Notice:** 이 게시물은 [Smile Han](https://www.youtube.com/watch?v=OuP4kH2KVd4&list=PL01dF8Z1_htAwkwI5hwt4Enc_HPP7EYia&index=2)님의 유튜브를 참고하였습니다.
+{: .notice--info}
