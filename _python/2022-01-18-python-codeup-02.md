@@ -9,7 +9,7 @@ tags:
   - 코드업
 ---
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **10.**   
 정수형(int)으로 변수를 선언하고, 변수에 정수값을 저장한 후 변수에 저장되어 있는 값을 그대로 출력해보자.
 </div>
@@ -18,9 +18,15 @@ tags:
 **풀이**
 
 ```python
-
-
+# 답
+x = int(input())
+print(x)
+# 나의 답
+var x = 2
+print(x)
 ```
+아.. 스위프트랑 파이썬이랑 섞어버린 답을 적어버렸다.<br>
+파이썬에서는 `var`이나 `let`이 필요없다는걸 기억하자.
 </div>
 
 <div class="notice--success" markdown="1">
@@ -41,12 +47,12 @@ tags:
 **풀이**
 
 ```python
-
-
+x = input() # 기본으로 문자열로 반환되므로 str()을 안써주어도 된다.
+print(x)
 ```
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **12.**   
 실수형(float)로 변수를 선언하고 그 변수에 실수값을 저장한 후 저장되어 있는 실수값을 출력해보자.
 </div>
@@ -55,12 +61,12 @@ tags:
 **풀이**
 
 ```python
-
-
+x = float(input())
 ```
+실수형으로 변환할 때는 `float()`을 사용한다.
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 **13.**   
 정수(int) 2개를 입력받아 그대로 출력해보자.<br>
 (단, 띄어쓰기를 기준으로 입력한다.)<br>
@@ -87,12 +93,18 @@ ex ) `map(int, ['1', '2', '3']) >> [1,2,3]`<br>
 **풀이**
 
 ```python
-
-
+# 답
+var = list(map(int, input().split()))
+print(var[0], var[1])
+# 또는 print(*var)로 하는 방법도 있다.
+# 나의 답
+x, y = map(int, input().split())
+print(x, y)
 ```
+내가 적은 답도 틀린건 아니지만, 배열을 이용해 저장하고 출력할 수도 있다고 한다.
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 **14.**   
 2개의 문자(ASCII CODE)를 입력받아서 순서를 바꿔 출력해보자.
 </div>
@@ -114,12 +126,18 @@ ex ) A => 1100001
 **풀이**
 
 ```python
-
-
+# 답
+x = input().split()
+print(x[1], x[0])
+# 나의 답
+x = list(input().split())
+print(x[1], x[0])
 ```
+13번에서 알게 된 배열을 적용해보았다.<br>
+`map()`을 이용하지 않으므로 `list()`를 사용할 필요는 없다.
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **15.**   
 실수(float) 1개를 입력받아 저장한 후, 저장되어 있는 값을 소수점 셋 째 자리에서 반올림하여 소수점 이하 둘 째 자리까지 출력하시오.
 </div>
@@ -137,9 +155,14 @@ ex ) A => 1100001
 **풀이**
 
 ```python
-
-
+# 방법 1
+x = float(input())
+print(round(x), 2)
+# 방법 2
+x = round(float(input()), 2)
+print(x)
 ```
+`round([실수], [자릿수])`형이라는 것을 기억하자.
 </div>
 
 <div class="notice--success" markdown="1">
@@ -151,15 +174,16 @@ int형 정수 1개를 입력받아 공백을 사이에 두고 3번 출력해보�
 **풀이**
 
 ```python
-
-
+x = int(input())
+print(x, x, x)
 ```
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 **17.**   
 어떤 형식에 맞추어 시간이 입력될 때, 그대로 출력하는 연습을 해보자.<br>
 콜론(:) 기호를 기준으로 두 수가 각 변수에 저장된다.<br>
+
 입력 : 3:15<br>
 출력 : 3:15
 </div>
@@ -178,12 +202,19 @@ int형 정수 1개를 입력받아 공백을 사이에 두고 3번 출력해보�
 **풀이**
 
 ```python
-
-
+# 답
+h, m = input().split(':')
+print('{}:{}'.format(h, m))
+# 나의 답
+h, m = input().split(':')
+print(h + ':' + m)
 ```
+중괄호{}에 각각 h와 m이 대입이 되어 출력이 된다.<br>
+C언어에서 `%d`와 비슷한 역할을 하는 것 같다.<br>
+알아보니 파이썬에서도 `print('%s:%s' % (h, m))`로 출력이 가능하다고 한다.
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **18.**   
 년, 월, 일을 입력받아 지정된 형식으로 출력하는 연습을 해보자.<br>
 
@@ -191,6 +222,7 @@ int형 정수 1개를 입력받아 공백을 사이에 두고 3번 출력해보�
 연, 월, 일이 ".(닷)"으로 구분되어 입력된다.<br>
 **출력**<br>
 입력받은 연, 월, 일을 yyyy.mm.dd 형식으로 출력한다.<br>
+
 입력 : 2020.2.9<br>
 출력 : 2020.02.09<br>
 (단, m 혹은 d가 한 자리 수인 경우 앞에 0을 붙여 출력한다.)
@@ -200,12 +232,17 @@ int형 정수 1개를 입력받아 공백을 사이에 두고 3번 출력해보�
 **풀이**
 
 ```python
-
-
+y, m, d = input().split('.')
+if len(m) == 1:
+    m = '0' + m
+if len(d) == 1:
+    d = '0' + d
+print('{}.{}.{}'.format(y, m, d))
 ```
+`len()`으로 문자열의 길이를 확인한 후 문자열에 '0'을 추가해야한다.
 </div>
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 **19.**   
 주민번호는 다음과 같이 구성된다.<br>
 
@@ -229,7 +266,11 @@ ex)110011-0000000<br>
 **풀이**
 
 ```python
-
-
+x, y = input().split('-')
+print(x+y)
 ```
+`print('{}{}'.format(a,b))` 처럼 `format()`을 사용하는 방법도 있다.
 </div>
+
+**Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.
+{: .notice--info}
