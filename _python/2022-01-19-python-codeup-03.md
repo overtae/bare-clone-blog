@@ -137,14 +137,14 @@ ex) '문자'*5 >> '문자문자문자문자문자'
 x = input()
 count = len(x)-1
 # 0의 개수는 문자열으 길이보다 하나 적다.
-for i in range(len(x)):
+for i in x:
   print([int(x[i] + '0'*count)])
-  # count로 0의 개수 지정
+  # int()를 사용 안 할 경우 문자열로 출력이 된다. ex) ['1000']
   count -= 1
 # 나의 답
 x = input()
 for i in range(5):
-    print('{}{}'.format(x[i], '0' * (4 - i)))
+    print('[{}{}]'.format(x[i], '0' * (4 - i)))
 ```
 틀린건 아니지만 내가 적은 답의 경우 5자리 숫자만 가능하다.
 </div>
