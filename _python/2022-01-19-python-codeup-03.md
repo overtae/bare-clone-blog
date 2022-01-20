@@ -9,6 +9,8 @@ tags:
   - 코드업
 ---
 
+> 문제 20
+
 <div class="notice--success" markdown="1">
 **20.**   
 1개의 문자열을 입력받아 그대로 출력해보자.
@@ -22,6 +24,8 @@ x = input()
 print(x)
 ```
 </div>
+
+> 문제 22
 
 <div class="notice--success" markdown="1">
 **22.**   
@@ -37,6 +41,8 @@ x = input()
 print(x)
 ```
 </div>
+
+> 문제 23
 
 <div class="notice--warning" markdown="1">
 **23.**   
@@ -64,6 +70,8 @@ print(x[0], x[1], sep='\n')
 ```
 답이 틀리진 않았지만 `format()`을 이용하여 좀 더 직관적이게 코드를 짜는게 좋아보인다.
 </div>
+
+> 문제 24
 
 <div class="notice--warning" markdown="1">
 **24.**   
@@ -104,6 +112,8 @@ for i in x:
 반복 범위를 `range(len(x))`로 설정하는 방법도 있다.<br>
 이렇게 했을 경우 출력은 `print("'{}'".format(string[i]))`로 해야된다.
 </div>
+
+> 문제 25
 
 <div class="notice--warning" markdown="1">
 **25.**   
@@ -149,6 +159,8 @@ for i in range(5):
 틀린건 아니지만 내가 적은 답의 경우 5자리 숫자만 가능하다.
 </div>
 
+> 문제 26
+
 <div class="notice--success" markdown="1">
 **26.**   
 입력되는 시:분:초 에서 분만 출력해보자.
@@ -163,6 +175,8 @@ print(x[1])
 ```
 배열을 이용하지 않고 h, m, s로 나눠 받아 m만 출력하는 방법도 있다.
 </div>
+
+> 문제 27
 
 <div class="notice--danger" markdown="1">
 **27.**   

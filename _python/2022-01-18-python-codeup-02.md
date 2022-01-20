@@ -9,6 +9,8 @@ tags:
   - 코드업
 ---
 
+> 문제 10
+
 <div class="notice--danger" markdown="1">
 **10.**   
 정수형(int)으로 변수를 선언하고, 변수에 정수값을 저장한 후 변수에 저장되어 있는 값을 그대로 출력해보자.
@@ -28,6 +30,8 @@ print(x)
 아.. 스위프트랑 파이썬이랑 섞어버린 답을 적어버렸다.<br>
 파이썬에서는 `var`이나 `let`이 필요없다는걸 기억하자.
 </div>
+
+> 문제 11
 
 <div class="notice--success" markdown="1">
 **11.**   
@@ -52,6 +56,8 @@ print(x)
 ```
 </div>
 
+> 문제 12
+
 <div class="notice--danger" markdown="1">
 **12.**   
 실수형(float)로 변수를 선언하고 그 변수에 실수값을 저장한 후 저장되어 있는 실수값을 출력해보자.
@@ -65,6 +71,8 @@ x = float(input())
 ```
 실수형으로 변환할 때는 `float()`을 사용한다.
 </div>
+
+> 문제 13
 
 <div class="notice--warning" markdown="1">
 **13.**   
@@ -104,6 +112,8 @@ print(x, y)
 내가 적은 답도 틀린건 아니지만, 배열을 이용해 저장하고 출력할 수도 있다고 한다.
 </div>
 
+> 문제 14
+
 <div class="notice--warning" markdown="1">
 **14.**   
 2개의 문자(ASCII CODE)를 입력받아서 순서를 바꿔 출력해보자.
@@ -137,6 +147,8 @@ print(x[1], x[0])
 `map()`을 이용하지 않으므로 `list()`를 사용할 필요는 없다.
 </div>
 
+> 문제 15
+
 <div class="notice--danger" markdown="1">
 **15.**   
 실수(float) 1개를 입력받아 저장한 후, 저장되어 있는 값을 소수점 셋 째 자리에서 반올림하여 소수점 이하 둘 째 자리까지 출력하시오.
@@ -165,6 +177,8 @@ print(x)
 `round([실수], [자릿수])`형이라는 것을 기억하자.
 </div>
 
+> 문제 16
+
 <div class="notice--success" markdown="1">
 **16.**   
 int형 정수 1개를 입력받아 공백을 사이에 두고 3번 출력해보자.
@@ -178,6 +192,8 @@ x = int(input())
 print(x, x, x)
 ```
 </div>
+
+> 문제 17
 
 <div class="notice--warning" markdown="1">
 **17.**   
@@ -214,6 +230,8 @@ C언어에서 `%d`와 비슷한 역할을 하는 것 같다.<br>
 알아보니 파이썬에서도 `print('%s:%s' % (h, m))`로 출력이 가능하다고 한다.
 </div>
 
+> 문제 18
+
 <div class="notice--danger" markdown="1">
 **18.**   
 년, 월, 일을 입력받아 지정된 형식으로 출력하는 연습을 해보자.<br>
@@ -241,6 +259,8 @@ print('{}.{}.{}'.format(y, m, d))
 ```
 `len()`으로 문자열의 길이를 확인한 후 문자열에 '0'을 추가해야한다.
 </div>
+
+> 문제 19
 
 <div class="notice--warning" markdown="1">
 **19.**   
