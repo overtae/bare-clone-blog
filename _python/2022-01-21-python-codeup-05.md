@@ -1,0 +1,183 @@
+---
+title: "[파이썬 기초 100제] 4강 출력변환"
+date: 2022-01-21
+categories:
+  - Python
+tags:
+  - python
+  - 기초 100제
+  - 코드업
+---
+
+> 문제 31
+
+<div class="notice--success" markdown="1">
+**31.**   
+10진수를 입력받아 8진수(octal)로 출력해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+8진수는 '0o12'처럼 숫자 앞에 '0o'를 붙여준다. 이것으로 '12'가 8진수의 '12'임을 인지한다.
+
+10진수를 8진수로 변환하는 함수는 oct()이며, '0o12'와 같이 출력되므로 앞 두자리를 생략하고 출력하면된다. 따라서 '0o12'[2:]를 해주면 되는 것.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+> 문제 32
+
+<div class="notice--success" markdown="1">
+**32.**   
+10진수를 입력받아 16진수(hexadecimal)로 출력해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+16진수는 '0xa'처럼 숫자 앞에 '0x'를 붙여준다. 이것으로 'a'가 16진수의 'a'임을 인지한다.
+
+10진수를 16진수로 변환하는 함수는 hex()이며, '0xa'와 같이 출력되므로 앞 두자리를 생략하고 출력하면된다. 따라서 '0xa'[2:]를 해주면 되는 것.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+> 문제 33
+
+<div class="notice--success" markdown="1">
+**33.**   
+10진수를 입력받아 16진수(hexadecimal)로 출력해보자.<br>
+16진수(대문자)로 출력한다.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+소문자를 대문자로 변환하려면 문자열의 메소드(함수)인 upper()를 이용하면 된다.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+> 문제 34
+
+<div class="notice--success" markdown="1">
+**34.**   
+8진수로 입력된 정수 1개를 10진수로 바꾸어 출력해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+10진수로 변환하고자 할 때는 int()를 이용하면 된다.
+
+첫번째 파라미터로는 변환하고자하는 숫자의 문자열('0o12')을,
+
+두번째 파라미터로는 첫번째 값이 몇 진수인지를 정수로 입력하면 된다.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+> 문제 35
+
+<div class="notice--success" markdown="1">
+**35.**   
+16진수로 입력된 정수 1개를 8진수로 바꾸어 출력해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+16진수 >> 10진수 >> 8진수 순서대로 변환
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+> 문제 36
+
+<div class="notice--success" markdown="1">
+**36.**   
+영문자 1개를 입력받아 아스키 코드표의 10진수 값으로 출력해보자.<br>
+아스키 코드란? 문자를 이진수의 7비트로 표현한 것<br>
+ex ) A => 1100001
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+문자열에 대응되는 아스키코드를 반환해주는 함수 ord()를 이용하면 된다.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+> 문제 37
+
+<div class="notice--success" markdown="1">
+**37.**   
+10진 정수 1개를 입력받아 아스키 문자로 출력해보자.
+</div>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+
+```
+</div>
+
+**Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.
+{: .notice--info}
