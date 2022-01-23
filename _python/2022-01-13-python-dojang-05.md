@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-06/
 title: "[파이썬 코딩 도장] Unit 16 문제 풀이"
 date: 2022-01-13
 categories:

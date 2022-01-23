@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-17/
 title: "[파이썬 기초 100제] 6강 비트 시프트 연산"
 date: 2022-01-23
 categories:

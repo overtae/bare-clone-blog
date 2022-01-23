@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-15/
 title: "[파이썬 기초 100제] 4강 출력변환"
 date: 2022-01-21
 categories:
@@ -11,7 +12,7 @@ tags:
 
 > 문제 31
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **31.**   
 10진수를 입력받아 8진수(octal)로 출력해보자.
 </div>
@@ -31,8 +32,14 @@ tags:
 **풀이**
 
 ```python
-
+# 답
+x = int(input())
+print(oct(x)[2:])
+# 나의 답
+x = oct(input())
+print(x[2:])
 ```
+문자열은 oct() 함수에 넣을 수 없
 </div>
 
 > 문제 32

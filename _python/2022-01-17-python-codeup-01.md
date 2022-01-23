@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-11/
 title: "[파이썬 기초 100제] 1강 출력"
 date: 2022-01-17
 categories:

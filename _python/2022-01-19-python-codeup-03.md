@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-13/
 title: "[파이썬 기초 100제] 2강 입출력 - 2"
 date: 2022-01-19
 categories:

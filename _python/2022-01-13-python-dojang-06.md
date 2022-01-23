@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-07/
 title: "[파이썬 코딩 도장] Unit 17 문제 풀이"
 date: 2022-01-13
 categories:

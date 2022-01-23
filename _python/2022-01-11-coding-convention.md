@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-02/
 title: "[Python] 코딩 컨벤션 Coding Convention"
 date: 2022-01-11
 categories:

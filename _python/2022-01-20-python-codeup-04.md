@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-14/
 title: "[파이썬 기초 100제] 3강 데이터형"
 date: 2022-01-20
 categories:
@@ -41,7 +42,8 @@ tags:
 **풀이**
 
 ```python
-
+x = int(input())
+print(x)
 ```
 </div>
 
@@ -56,7 +58,8 @@ tags:
 **풀이**
 
 ```python
-
+x = float(input())
+print(x)
 ```
 </div>
 
@@ -71,7 +74,8 @@ tags:
 **풀이**
 
 ```python
-
+x = int(input())
+print(x)
 ```
 </div>
 

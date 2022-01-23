@@ -1,4 +1,5 @@
 ---
+permalink: /python/python-16/
 title: "[파이썬 기초 100제] 5강 산술연산"
 date: 2022-01-22
 categories:
