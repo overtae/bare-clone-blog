@@ -21,7 +21,8 @@ tags:
 **풀이**
 
 ```python
-
+x, y = map(int, input().split())
+print(x + y)
 ```
 </div>
 
@@ -61,13 +62,14 @@ tags:
 **풀이**
 
 ```python
-
+x, y = map(int, input().split())
+print(x + y)
 ```
 </div>
 
 > 문제 40
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 **40.**   
 입력된 정수의 부호를 바꿔 출력해보자.
 </div>
@@ -76,13 +78,15 @@ tags:
 **풀이**
 
 ```python
-
+x = int(input())
+print(-x)
 ```
+`x = -int(input())` 이런 식으로 int() 앞에 부호를 붙이는 방법도 있다.
 </div>
 
 > 문제 41
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **41.**   
 영문자 1개를 입력받아 그 다음 문자를 출력해보자.<br>
 영문자 'A'의 다음 문자는 'B'이고, 영문자 '0'의 다음 문자는 '1'이다.
@@ -103,13 +107,18 @@ tags:
 **풀이**
 
 ```python
-
+order = ord(input())
+print( chr(order+1) )
+# 나의 답
+x = int(input())
+print(chr(x + 1))
 ```
+입력 받은 문자를 정수로 변환하는 것이 아니라 ord()를 이용해 아스키 코드로 변환해주어야 한다.
 </div>
 
 > 문제 42
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 **42.**   
 정수 2개(a, b) 를 입력받아 a를 b로 나눈 몫을 출력해보자.
 </div>
@@ -129,8 +138,10 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+print(a // b)
 ```
+몫만 반환하는 산술 연산자 `//`를 기억하자.
 </div>
 
 > 문제 43
@@ -144,7 +155,8 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+print(a % b)
 ```
 </div>
 
@@ -159,13 +171,14 @@ tags:
 **풀이**
 
 ```python
-
+x = int(input()) + 1
+print(x)
 ```
 </div>
 
 > 문제 45
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **45.**   
 정수 2개(a, b)를 입력받아 합, 차, 곱, 몫, 나머지, 나눈 값을 자동으로 계산해보자.
 
@@ -184,8 +197,19 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+print(a + b)
+print(a - b)
+print(a * b)
+print(a // b)
+print(a % b)
+# 답
+print( round(a/b, 2) )
+# 나의 답
+print('{}'.format(a / b, 2)
 ```
+format() 함수 괄호()안에는 중괄호{}에 대응시킬 값을 넣어주는 곳이지 자리수 지정을 하는 곳이 아니다.<br>
+만약 format을 쓰고 싶다면 `print('{:.2f}'.format(a / b))` 이렇게 중괄호 안에 자리수를 지정해주면 된다.
 </div>
 
 > 문제 46
@@ -204,8 +228,13 @@ tags:
 **풀이**
 
 ```python
-
+x, y, z = map(int, input().split())
+sum = x + y + z
+print(sum)
+print(round(sum / 3, 1))
 ```
+sum 변수를 만들지 않고 print함수 안에서 계산을 하는 방법도 있다.<br>
+그렇게 할 땐 평균 계산할 때 덧셈 부분을 괄호로 묶어주는 것울 잊지 말자.
 </div>
 
 **Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.

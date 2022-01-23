@@ -39,7 +39,8 @@ print(oct(x)[2:])
 x = oct(input())
 print(x[2:])
 ```
-문자열은 oct() 함수에 넣을 수 없
+문자열은 oct() 함수로 변환이 불가해 정수형으로 바꿔준 뒤 넣어주어야 한다.<br>
+변환 후 문자열(배열)로 반환이 되므로 앞의 문자 두 개를 자르기 위해 배열의 세번째부터 끝까지 출력하겠다는 의미의 [2:]를 추가해주어야 한다.
 </div>
 
 > 문제 32
@@ -64,13 +65,14 @@ print(x[2:])
 **풀이**
 
 ```python
-
+x = int(input())
+print(hex(x)[2:])
 ```
 </div>
 
 > 문제 33
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **33.**   
 10진수를 입력받아 16진수(hexadecimal)로 출력해보자.<br>
 16진수(대문자)로 출력한다.
@@ -89,13 +91,20 @@ print(x[2:])
 **풀이**
 
 ```python
-
+# 답
+hexadecimal = int(input())
+hexConv = hex(hexadecimal)[2:]
+print( hexConv.upper())
+# 나의 답
+x = hex(int(input()))[2:]
+print(upper(x))
 ```
+upper 메소드는 .으로 접근해야 된다는 걸 기억하자.
 </div>
 
 > 문제 34
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **34.**   
 8진수로 입력된 정수 1개를 10진수로 바꾸어 출력해보자.
 </div>
@@ -117,13 +126,24 @@ print(x[2:])
 **풀이**
 
 ```python
-
+# 답
+octal = '0o' + input()
+print( int(octal, 8) )
+# 나의 답
+x = int(input())
+print(x)
 ```
+int()에 첫번째 파라미터엔 입력 받은 문자열을 두번째 파라미터엔 몇 진수인지 입력해야된다고 한다
+```python
+x = int(input(), 8)
+print(x)
+```
+입력 받은 값에 0o를 안붙여주어도 결과값은 같은데 왜인지 모르겠다.
 </div>
 
 > 문제 35
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **35.**   
 16진수로 입력된 정수 1개를 8진수로 바꾸어 출력해보자.
 </div>
@@ -141,8 +161,15 @@ print(x[2:])
 **풀이**
 
 ```python
-
+# 답
+hexadecimal = '0x' + input()
+integer = int(hexadecimal, 16)
+print( oct(integer)[2:] )
+# 나의 답
+x = int('0x' + input(), 16)
+print(oct(x))
 ```
+oct()로 변환을 하면 앞의 0o가 붙게되고 이를 잘라내어야 한다는 것을 기억하자.
 </div>
 
 > 문제 36
@@ -167,13 +194,14 @@ ex ) A => 1100001
 **풀이**
 
 ```python
-
+x = ord(input())
+print(x)
 ```
 </div>
 
 > 문제 37
 
-<div class="notice--success" markdown="1">
+<div class="notice--danger" markdown="1">
 **37.**   
 10진 정수 1개를 입력받아 아스키 문자로 출력해보자.
 </div>
@@ -182,8 +210,15 @@ ex ) A => 1100001
 **풀이**
 
 ```python
-
+# 답
+x = chr(int(input()))
+print(x)
+# 나의 답
+x = str(int(input()))
+print(x)
 ```
+정수를 아스키 문자로 출력할 때는 chr()을 써주도록 하자.<br>
+나의 답은 문자열을 정수로 바꾸고 다시 문자열로 변환시키는 바보같은 코드였다..
 </div>
 
 **Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.
