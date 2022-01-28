@@ -1,6 +1,6 @@
 ---
 permalink: /python/python-19/
-title: "[파이썬 기초 100제] 8강 논리연산"
+title: "[파이썬 기초 100제] 8강 논리 연산"
 date: 2022-01-26
 categories:
   - Python
