@@ -1,7 +1,7 @@
 ---
+title: Auto Layout
 layout: category
-title: "Sample"
-categories: autolayout
-permalink: /autolayout/
+permalink: /categories/Autolayout/
+taxonomy: Auto Layout
 author_profile: true
 ---
