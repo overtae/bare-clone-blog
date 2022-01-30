@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /home
+permalink: /home.html
 author_profile: false
 hidden: true
 header:
