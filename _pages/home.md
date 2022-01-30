@@ -5,7 +5,7 @@ author_profile: false
 hidden: true
 header:
   image: assets/images/home.gif
-  feature_row:
+feature_row:
   - image_path: /assets/images/home/autolayout.png
     alt: "autolayout"
     title: "Auto Layout"
