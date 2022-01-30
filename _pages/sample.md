@@ -2,6 +2,6 @@
 layout: category
 title: "Sample"
 categories: autolayout
-permalink: /categories/autolayout/
+permalink: /autolayout/
 author_profile: true
 ---
