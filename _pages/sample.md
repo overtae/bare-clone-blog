@@ -1,7 +1,7 @@
 ---
 layout: category
 title: "Sample"
-category: autolayout
+categories: autolayout
 permalink: /autolayout/
 author_profile: true
 ---
