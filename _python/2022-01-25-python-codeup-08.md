@@ -12,7 +12,7 @@ tags:
 
 > 문제 49
 
-<div class="notice--danger" markdown="1">
+<div class="notice--success" markdown="1">
 **49.**   
 두 정수(a, b)를 입력받아 a가 b보다 크면 1을, a가 b보다 작거나 같으면 0을 출력하는 프로그램을 작성해보자.
 </div>
@@ -43,13 +43,26 @@ tags:
 **풀이**
 
 ```python
+a, b = map(int, input().split())
 
+# 방법 1 : if-elif
+if a > b:
+    print(1)
+elif a <= b:
+    print(0)
+# 문제에서 정확한 조건('a가 b보다 작거나 같으면')을 제시해주었으므로 방법 1을 이용하는 것이 좋다.
+
+# 방법 2 : and-or
+print(a > b and 1 or 0)
+
+# 방법 3 : 삼항 연산
+print(1 if a > b else 0)
 ```
 </div>
 
 > 문제 50
 
-<div class="notice--danger" markdown="1">
+<div class="notice--success" markdown="1">
 **50.**   
 두 정수(a, b)를 입력받아 a와 b가 같으면 1을, 같지 않으면 0을 출력하는 프로그램을 작성해보자.
 </div>
@@ -58,13 +71,17 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+if a == b:
+    print(1)
+elif a != b:
+    print(0)
 ```
 </div>
 
 > 문제 51
 
-<div class="notice--danger" markdown="1">
+<div class="notice--success" markdown="1">
 **51.**   
 두 정수(a, b)를 입력받아 b가 a보다 크거나 같으면 1을, 그렇지 않으면 0을 출력하는 프로그램을 작성해보자.
 </div>
@@ -73,7 +90,7 @@ tags:
 <summary>TIP</summary>
 <div markdown="1">
 
-"그렇지 않으면" 이라는 조건은 else로 처리할 수 있다
+"그렇지 않으면" 이라는 조건은 else로 처리할 수 있다.
 
 </div>
 </details>
@@ -82,13 +99,18 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+if b >= a:
+    print(1)
+else:
+    # '그렇지 않으면' 조건은 else를 사용한다.
+    print(0)
 ```
 </div>
 
 > 문제 52
 
-<div class="notice--danger" markdown="1">
+<div class="notice--success" markdown="1">
 **52.**   
 두 정수(a, b)를 입력받아 a와 b가 서로 다르면 1을, 그렇지 않으면 0을 출력하는 프로그램을 작성해보자.
 </div>
@@ -97,23 +119,13 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+if a != b:
+    print(1)
+else:
+    print(0)
 ```
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 **Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.
 {: .notice--info}

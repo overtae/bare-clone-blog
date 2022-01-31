@@ -12,7 +12,7 @@ tags:
 
 > 문제 53
 
-<div class="notice--danger" markdown="1">
+<div class="notice--success" markdown="1">
 **53.**   
 1(true, 참) 또는 0(false, 거짓) 이 입력되었을 때 반대로 출력하는 프로그램을 작성해보자.
 </div>
@@ -36,6 +36,144 @@ tags:
 
 참 또는 거짓의 논리값을 역(반대)으로 바꾸기 위해서는 논리(logical)연산자 'not'를 사용할 수 있다.
 
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+boolNum = int(input())
+print(not boolNum)
+# 0이 아닌 모든 것은 참이다.
+```
+</div>
+
+> 문제 54
+
+<div class="notice--success" markdown="1">
+**54.**   
+두 개의 참(1) 또는 거짓(0)이 입력될 때, 모두 참일 때에만 참을 출력하는 프로그램을 작성해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+파이썬에서는 AND연산값이 참이면 뒤에 있는 값을 출력하게 된다.
+
+ex) '앞' and '뒤' >> '뒤'
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+a, b = map(int, input().split())
+print(a and b)
+# and는 &&이다.
+```
+</div>
+
+> 문제 55
+
+<div class="notice--success" markdown="1">
+**55.**   
+두 개의 참(1) 또는 거짓(0)이 입력될 때, 하나라도 참이면 참을 출력하는 프로그램을 작성해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+파이썬에서는 OR연산값이 참이면 참인 값을 출력하게 된다.
+
+ex) '참' or 0 >> '참' , 0 or True >> True
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+a, b = map(int, input().split())
+print(a or b)
+# or은 ||이다.
+```
+</div>
+
+> Bonus 문제
+
+<div class="notice--success" markdown="1">
+**Bonus.**   
+1개의 정수형 입력이 들어오면 논리 연산을 이용하여 '홀수'와 '짝수'를 판별하여라
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+입력이 2로 나눠지면 짝수이고, 그렇지 않으면 홀수임을 이용한다.
+
+파이썬에서의 AND와 OR의 특징을 이용한다. => 파이썬에서는 이러한 연산을 "삼항 연산"으로 정의한다.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+a = int(input())
+print(a % 2 == 0 and "짝수" or "홀수")
+# 혹은,
+print(a % 2 and "홀수" or "짝수")
+# and 연산자는 둘 다 참일 경우 뒤의 값을,
+# or 연산자는 참인 값을 출력하기 때문에 가능하다.
+```
+</div>
+
+> 문제 56
+
+<div class="notice--success" markdown="1">
+**56.**   
+두 가지의 참(1) 또는 거짓(0)이 입력될 때, 참/거짓이 서로 다를 때에만 참을 출력하는 프로그램을 작성해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+이러한 논리연산을 XOR(exclusive or, 배타적 논리합)연산이라고도 부른다. 이를 표현하기 위해서는 (a AND (NOT b)) OR ((NOT a) AND b)처럼 하면 된다.
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+a, b = map(int, input().split())
+print((not a and b) or (a and not b))
+# XOR 연산을 해주면 된다.
+```
+답에서는 `(not b)` 이렇게 괄호로 따로 묶어주었는데 안묶어도 결과가 같아서 묶지 않았다.
+</div>
+
+> 문제 57
+
+<div class="notice--success" markdown="1">
+**57.**   
+두 개의 참(1) 또는 거짓(0)이 입력될 때, 참/거짓이 서로 같을 때에만 참이 계산되는 프로그램을 작성해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
 ![image]({{ site.url }}{{ site.baseurl }}/assets/images/python/03.png){: .align-center}
 
 </div>
@@ -45,8 +183,40 @@ tags:
 **풀이**
 
 ```python
-
+a, b = map(int, input().split())
+print((a and b) or (not a and not b))
 ```
+</div>
+
+> 문제 58
+
+<div class="notice--danger" markdown="1">
+**58.**   
+두 개의 참(1) 또는 거짓(0)이 입력될 때, 모두 거짓일 때에만 참이 계산되는 프로그램을 작성해보자.
+</div>
+
+<details>
+<summary>TIP</summary>
+<div markdown="1">
+
+![image]({{ site.url }}{{ site.baseurl }}/assets/images/python/04.png){: .align-center}
+
+</div>
+</details>
+
+<div class="notice" markdown="1">
+**풀이**
+
+```python
+a, b = map(int, input().split())
+# 답
+print(not(a or b))
+# not a and not b와 같은 조건이다.
+
+# 나의 답
+print(not(a and b))
+```
+not 연산자로 묶게 될 경우 and는 or로 바뀐다는 것을 알아두자.
 </div>
 
 **Notice:** 이 게시물은 [우리밋_woorimIT](https://www.youtube.com/watch?v=7sykajCtgCw&list=PLSK4WsJ8JS4dOszA7Zr8paqI81Mv27tNq&index=2)님의 유튜브를 참고하였습니다.
