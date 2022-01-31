@@ -10,7 +10,7 @@ feature_row:
     alt: "autolayout"
     title: "Auto Layout"
     excerpt: "iOS Auto Layout에 대해 정리한 포스트를 올리고 있습니다."
-    url: "/categories/Autolayout/"
+    url: "/categories/autolayout/"
     btn_class: "btn--inverse"
     btn_label: "Go →"
   - image_path: /assets/images/home/apple.png
