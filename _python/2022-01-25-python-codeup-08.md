@@ -1,5 +1,6 @@
 ---
 permalink: /python/python-18/
+classes: wide
 title: "[파이썬 기초 100제] 7강 비교연산"
 date: 2022-01-25
 categories:
