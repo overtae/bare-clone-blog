@@ -273,9 +273,9 @@ compress_html:
 
 # Collections
 collections:
-  # autolayout:
-  #   output: true
-  #   permalink: /:collection/:path/
+  autolayout:
+    output: true
+    permalink: /:collection/:path/
   web:
     output: true
     permalink: /:collection/:path/
@@ -303,15 +303,15 @@ defaults:
       share: true
       related: true
   # _autolayout
-  # - scope:
-  #     path: ""
-  #     type: autolayout
-  #   values:
-  #     layout: single
-  #     read_time: false
-  #     author_profile: true
-  #     share: true
-  #     comments: true
+  - scope:
+      path: ""
+      type: autolayout
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
   # web
   - scope:
       path: ""

@@ -41,6 +41,13 @@ feature_row:
     url: "/swift/"
     btn_class: "btn--inverse"
     btn_label: "Go →"
+  - image_path: /assets/images/home/etc.png
+    alt: "etc"
+    title: "etc"
+    excerpt: "그 외 기타 포스트들입니다."
+    url: "/categories/"
+    btn_class: "btn--inverse"
+    btn_label: "Go →"
 ---
 
 {% include feature_row %}
