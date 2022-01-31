@@ -1,7 +1,7 @@
 ---
 title: Auto Layout
 layout: category
-permalink: /categories/autolayout
+permalink: /categories/autolayout/
 author_profile: true
 ---
 
