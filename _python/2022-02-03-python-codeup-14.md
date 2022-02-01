@@ -1,5 +1,5 @@
 ---
-permalink: /python/python-21/
+permalink: /python/python-24/
 title: "[파이썬 기초 100제] 13강 종합"
 date: 2022-02-03
 categories:

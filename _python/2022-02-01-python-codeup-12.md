@@ -1,5 +1,5 @@
 ---
-permalink: /python/python-21/
+permalink: /python/python-22/
 title: "[파이썬 기초 100제] 11강 조건/선택 실행 구조"
 date: 2022-02-01
 categories:
@@ -13,7 +13,7 @@ tags:
 > 문제 65
 
 <div class="notice--success" markdown="1">
-**65.**
+**65.**   
 세 정수 a, b, c가 입력되었을 때, 짝수만 출력해보자.
 </div>
 
@@ -44,7 +44,7 @@ filter() 이용
 > 문제 66
 
 <div class="notice--success" markdown="1">
-**66.**
+**66.**   
 세 정수 a, b, c가 입력되었을 때, 짝(even)/홀(odd)을 출력해보자.
 </div>
 
@@ -69,7 +69,7 @@ map() 함수 배우기
 > 문제 67
 
 <div class="notice--success" markdown="1">
-**67.**
+**67.**   
 정수 1개가 입력되었을 때, 음(minus)/양(plus)과 짝(even)/홀(odd)을 출력해보자.<br>
 입력 : -4<br>
 출력 : <br>
@@ -89,7 +89,7 @@ even
 > 문제 68
 
 <div class="notice--success" markdown="1">
-**68.**
+**68.**   
 점수(정수, 0 ~ 100)를 입력받아 평가를 출력해보자.<br>
 
 **평가 기준**<br>
@@ -126,7 +126,7 @@ if-elif-else를 이용한다.
 > 문제 69
 
 <div class="notice--success" markdown="1">
-**69.**
+**69.**   
 평가를 문자(A, B, C, D, ...)로 입력받아 내용을 다르게 출력해보자.<br>
 
 | 평가          | 내용    |
@@ -151,7 +151,7 @@ if-elif-else를 이용한다.
 > 문제 70
 
 <div class="notice--success" markdown="1">
-**70.**
+**70.**   
 월이 입력될 때 계절 이름이 출력되도록 해보자.<br>
 
 | 월        | 계절 이름 |

@@ -1,5 +1,5 @@
 ---
-permalink: /python/python-21/
+permalink: /python/python-23/
 title: "[파이썬 기초 100제] 12강 반복 실행 구조"
 date: 2022-02-02
 categories:
