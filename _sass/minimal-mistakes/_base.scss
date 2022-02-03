@@ -396,9 +396,8 @@ details:hover summary::after {
   transition: width .3s;
 }
 
-details[open]:hover summary::after {
+details[open] summary::after {
   width: 20%;
-  transition: width .3s;
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -418,7 +417,7 @@ details[open] > summary:before {
 }
 
 details div {
-  margin-left: 1.175em;
+  margin-left: 1.177em;
   padding-top: 0.5em;
   padding-left: 1.3em;
   padding-right: 1.3em;
