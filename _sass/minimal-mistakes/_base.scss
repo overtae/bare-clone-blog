@@ -362,30 +362,52 @@ input[type="submit"],
    Details Toggle Box
    ========================================================================== */
 
+html {
+  --details-transition-time: 400ms;
+}
+
 details {
   position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 0.8em;
   line-height: 1.5em;
 
-  summary::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 5px;
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    background: $base0a;
-  }
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-height-closed, auto);
+}
 
-  summary:hover summary::after {
-    width: 100%;
-    transition: width .3s;
-    cursor: pointer;
-  }
+details summary::before {
+  content: "\f204"
+}
 
-  div {
-    padding: 0.2em;
-    box-shadow: inset 0 -1px 0 $base0a;
+details[open] {
+  max-height: var(--details-height-open, auto);
+}
+
+details[open] summary::before {
+  content: "\f205";
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    height: 0;
   }
+  100% {
+    opacity: 0;
+    height: var(--details-height-open, '100%');
+  }
+}
+
+details div {
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-content-height-closed, auto);
+  overflow: hidden;
+  animation-name: slideDown;
+  animation-duration: var(--details-transition-time);
+}
+
+details.is--open div {
+  max-height: var(--details-content-height-open, auto);
 }
