@@ -376,6 +376,7 @@ summary::after {
 summary:hover summary::after {
   width: 100%;
   transition: width .3s;
+  cursor: pointer;
 }
 
 details div {
