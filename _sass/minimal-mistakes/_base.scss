@@ -357,3 +357,15 @@ input[type="submit"],
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+/*
+   Detail Toggle Box
+   ========================================================================== */
+
+details div {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size: 0.8em;
+  background: $base0a;
+  border-radius: $border-radius;
+}
