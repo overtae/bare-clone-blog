@@ -362,7 +362,7 @@ input[type="submit"],
    Details Toggle Box
    ========================================================================== */
 
-summary::after {
+details summary::after {
   content: '';
   display: block;
   width: 0;
@@ -373,15 +373,16 @@ summary::after {
   background: $base0a;
 }
 
-summary:hover summary::after {
+details summary:hover summary::after {
   width: 100%;
   transition: width .3s;
   cursor: pointer;
 }
 
 details div {
-  padding: 0.2rem;
+  padding: 0.2em;
+  text-decoration: underline;
+  text-underline-position: under;
   font-size: 0.8em;
-  box-shadow: inset 0 -11px 0 $base0a;
-  line-height: 1em;
+  line-height: 1.25em;
 }
