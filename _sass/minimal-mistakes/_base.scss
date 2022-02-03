@@ -362,53 +362,69 @@ input[type="submit"],
    Details Toggle Box
    ========================================================================== */
 
-html {
-  --details-transition-time: 400ms;
+details summary {
+  display: block;
+  cursor: pointer;
+  outline: 0; 
 }
 
-details {
-  font-family: "FontAwesome";
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  padding: 1em;
+  padding-left: 2.2em;
+  padding-bottom: 0;
   position: relative;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.8em;
-  line-height: 1.5em;
-
-  transition: all ease-out var(--details-transition-time, 0);
-  max-height: var(--details-height-closed, auto);
+  cursor: pointer;
 }
 
-details summary::before {
-  content: "\f204"
+details summary::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  position: absolute;
+  left: 1em;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-details[open] {
-  max-height: var(--details-height-open, auto);
+details:hover summary::after {
+  width: 10%;
+  transition: width .3s;
 }
 
-details[open] summary::before {
-  content: "\f205";
+details[open] summary::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  position: absolute;
+  left: 1em;
+  bottom: 0px;
+  background: rgba(255, 208, 0, 0.2);
 }
 
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    height: 0;
-  }
-  100% {
-    opacity: 0;
-    height: var(--details-height-open, '100%');
-  }
+summary:before {
+  font-family: "ionicons";
+  content: "\f125";
+  position: absolute;
+  top: 1.3em;
+  left: 1em;
+  transform: rotate(0);
+  transform-origin: .2em 50%;
+  transition: .25s transform ease;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
 }
 
 details div {
-  transition: all ease-out var(--details-transition-time, 0);
-  max-height: var(--details-content-height-closed, auto);
-  overflow: hidden;
-  animation-name: slideDown;
-  animation-duration: var(--details-transition-time);
-}
-
-details.is--open div {
-  max-height: var(--details-content-height-open, auto);
+  margin-left: 1.175em;
+  padding-top: 0.5em;
+  padding-left: 1.3em;
+  border-left: 1px solid $base0a;
 }
