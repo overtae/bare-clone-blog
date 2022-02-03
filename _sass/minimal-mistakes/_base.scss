@@ -359,13 +359,29 @@ input[type="submit"],
 }
 
 /*
-   Detail Toggle Box
+   Details Toggle Box
    ========================================================================== */
+
+summary::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  background: $base0a;
+}
+
+details:hover summary::after {
+  width: 100%;
+  transition: width .3s;
+}
 
 details div {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 0.8em;
-  background: $base0a;
+  border: 1px solid $base0a;
   border-radius: $border-radius;
 }
