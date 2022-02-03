@@ -15,6 +15,7 @@ body {
   font-family: $global-font-family;
   line-height: 1.5;
 
+
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
@@ -65,7 +66,7 @@ small,
 
 p {
   margin-bottom: 1.3em;
-  letter-spacing: 1em;
+  letter-spacing: 0.04em;
 }
 
 u,
@@ -170,7 +171,7 @@ figcaption > code,
 td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  font-size: 1em; // 0.8em
+  font-size: 0.8em; // 0.8em
   background: $code-background-color;
   border-radius: $border-radius;
 
@@ -374,9 +375,8 @@ details summary::-webkit-details-marker {
 }
 
 details summary {
-  padding: 1em;
+  padding: 0.5em;
   padding-left: 2.2em;
-  padding-bottom: 0;
   position: relative;
   cursor: pointer;
   width: fit-content;
@@ -389,7 +389,7 @@ details summary::after {
   height: 5px;
   position: absolute;
   left: 1em;
-  bottom: 0px;
+  bottom: 0.5em;
   background: rgba(255, 208, 0, 0.2);
 }
 
@@ -407,7 +407,7 @@ summary:before {
   font-family: "ionicons";
   content: "\f125";
   position: absolute;
-  top: 1.2em;
+  top: 0.5em;
   left: 1em;
   transform: rotate(0);
   transform-origin: .2em 50%;
@@ -419,11 +419,11 @@ details[open] > summary:before {
 }
 
 details div {
-  margin-left: 1.19em;
-  padding-top: 0.5em;
+  margin-left: 1.3em;
+  margin-top: 0.5em;
   padding-left: 1.3em;
   padding-right: 1.3em;
-  border-left: 1px solid rgba(255, 208, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 0.9em;
-  line-height: 1.75em;
+  line-height: 1.5em;
 }
