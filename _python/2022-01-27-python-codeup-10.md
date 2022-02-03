@@ -1,6 +1,5 @@
 ---
 permalink: /python/python-20/
-classes: wide
 title: "[파이썬 기초 100제] 9강 비트 단위 논리 연산"
 date: 2022-01-27
 categories:

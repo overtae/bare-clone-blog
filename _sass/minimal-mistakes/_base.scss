@@ -362,26 +362,30 @@ input[type="submit"],
    Details Toggle Box
    ========================================================================== */
 
-details summary::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 5px;
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  background: $base0a;
-}
+details {
+  position: relative;
+  
+  summary::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: $base0a;
+  }
 
-details summary:hover summary::after {
-  width: 100%;
-  transition: width .3s;
-  cursor: pointer;
-}
+  summary:hover summary::after {
+    width: 100%;
+    transition: width .3s;
+    cursor: pointer;
+  }
 
-details div {
-  padding: 0.2em;
-  font-size: 0.8em;
-  line-height: 1.25em;
-  box-shadow: inset 0 -1px 0 $base0a;
+  div {
+    padding: 0.2em;
+    font-size: 0.8em;
+    line-height: 1.25em;
+    box-shadow: inset 0 -1px 0 $base0a;
+  }
 }
