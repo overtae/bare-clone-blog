@@ -30,7 +30,7 @@ toc_sticky: true
 
 for-in 반복문은 컬렉션 또는 숫자 범위 내에 있는 목록을 반복하며 형식은 아래와 같다.
 
-```swift
+{% highlight swift linenos %}
 import Foundation
 
 for [상수명] in [컬렉션 또는 범위] {
@@ -38,14 +38,13 @@ for [상수명] in [컬렉션 또는 범위] {
     // [상수명]에는 [컬렉션 또는 범위]에서 가져온 항목이 할당된다.
 }
 
-
 for index in 1...3 {
     print(index)
 }
 // 1
 // 2
 // 3
-```
+{% endhighlight %}
 
 #### _을 이용한 참조체(i)의 생략
 
