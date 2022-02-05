@@ -390,7 +390,7 @@ details summary::after {
   position: absolute;
   left: 1em;
   bottom: 0.5em;
-  background: rgba(255, 208, 0, 0.2);
+  background: khaki;
 }
 
 details:hover summary::after {
@@ -400,7 +400,7 @@ details:hover summary::after {
 
 details[open] summary::after {
   width: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: lightgrey;
 }
 
 summary:before {
@@ -423,7 +423,7 @@ details div {
   margin-top: 0.5em;
   padding-left: 1.3em;
   padding-right: 1.3em;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid lightgray;
   font-size: 0.9em;
   line-height: 1.5em;
 }
