@@ -4,7 +4,7 @@ classes: wide
 title: "[앱 개발] 간단한 테이블 뷰 앱 만들어보기 2"
 date: 2022-01-19
 categories:
-  - Table View
+  - iOS App
 tags:
   - swift
   - iOS

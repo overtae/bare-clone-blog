@@ -1,7 +1,7 @@
 ---
-layout: collection
+layout: category
 title: "Swift"
-collection: swift
-permalink: /swift/
+permalink: /categories/swift/
+taxonomy: Swift
 author_profile: true
 ---

@@ -1,7 +1,7 @@
 ---
-layout: collection
+layout: category
 title: "iOS App"
-collection: iosapp
-permalink: /iosapp/
+permalink: /categories/iosapp/
+taxonomy: iOS App
 author_profile: true
 ---

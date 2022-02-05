@@ -4,7 +4,7 @@ classes: wide
 title: "[앱 개발] 테이블 뷰 이해하기"
 date: 2022-01-17
 categories:
-  - Table View
+  - iOS App
 tags:
   - swift
   - iOS

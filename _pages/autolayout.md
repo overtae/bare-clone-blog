@@ -1,7 +1,7 @@
 ---
-layout: collection
+layout: category
 title: "Auto Layout"
-collection: autolayout
-permalink: /autolayout/
+permalink: /categories/autolayout/
+taxonomy: Autolayout
 author_profile: true
 ---

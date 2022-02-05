@@ -1,7 +1,7 @@
 ---
-layout: collection
+layout: category
 title: "Python"
-collection: python
-permalink: /python/
+permalink: /categories/python/
+taxonomy: Python
 author_profile: true
 ---
