@@ -396,11 +396,13 @@ details summary::after {
 details:hover summary::after {
   width: 100%;
   transition: width .3s;
+  z-index: -1;
 }
 
 details[open] summary::after {
   width: 100%;
   background: lightgrey;
+  z-index: -1;
 }
 
 summary:before {
