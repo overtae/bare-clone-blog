@@ -1,13 +1,10 @@
 ---
-permalink: /python/python-02/
 title: "[Python] 코딩 컨벤션 Coding Convention"
 date: 2022-01-11
 categories:
   - Python
 tags:
-  - python
-  - coding convention
-  - code convention
+  - 개념 정리
 ---
 
 ### 코딩 컨벤션(Coding Convention)이란?

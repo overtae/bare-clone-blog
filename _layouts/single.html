@@ -14,26 +14,6 @@ layout: default
 {% endunless %}
 {% endif %}
 
-<!-- vanilla-back-to-top -->
-
-<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-<script>addBackToTop({
-  backgroundColor: '#ddd',
-  cornerOffset: 20, // px
-  diameter: 40, // px
-  ease: inOutSine, // any one from https://www.npmjs.com/package/ease-component will do
-  id: 'back-to-top',
-  innerHTML: '<svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>',
-  onClickScrollTo: 0, // px
-  scrollContainer: document.body, // or a DOM element, e.g., document.getElementById('content')
-  scrollDuration: 100, // ms
-  showWhenScrollTopIs: 1, // px
-  size: diameter, // alias for diameter
-  textColor: '#F4D03F',
-  zIndex: 1
-})</script>
-
-<!-- ... -->
 
 <div id="main" role="main">
   {% include sidebar.html %}
@@ -69,6 +49,19 @@ layout: default
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
+
+        <!-- vanilla-back-to-top -->
+        
+        <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+        <script>addBackToTop({
+            cornerOffset: 50,
+            diameter: 40,
+            backgroundColor: '#E9E9E9',
+            textColor: '#FFB200'
+          })</script>
+        
+        <!-- ... -->
+
         {% if page.toc %}
         <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
           <nav class="toc">
