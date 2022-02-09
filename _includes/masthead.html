@@ -14,15 +14,6 @@
         </a>
         <ul class="visible-links">
 
-          <!-- Dark / Light Mode Togle Switch start -->
-
-          {% if site.dark_theme_toggle == true %}
-          <input id="toggle_dark_theme" class="mh_toogle" type="checkbox">
-          <label for="toggle_dark_theme" class="material-icons-sharp mh_toggle_btn"></label>
-          {% endif %}
-
-          <!-- Dark / Light Mode Togle Switch end -->
-
           {%- for link in site.data.navigation.main -%}
           <li class="masthead__menu-item">
             <a href="{{ link.url | relative_url }}" {% if link.description %} title="{{ link.description }}" {% endif
@@ -30,6 +21,16 @@
           </li>
           {%- endfor -%}
         </ul>
+
+        <!-- Dark / Light Mode Togle Switch start -->
+
+        {% if site.dark_theme_toggle == true %}
+        <input id="toggle_dark_theme" class="mh_toogle" type="checkbox">
+        <label for="toggle_dark_theme" class="material-icons-sharp mh_toggle_btn"></label>
+        {% endif %}
+
+        <!-- ... -->
+
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search"
