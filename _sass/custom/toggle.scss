@@ -7,22 +7,22 @@
         box-sizing: border-box;
         outline: 0;
         display: block;
-        width: 3em;
+        width: 1.5em; // 3em
         height: 1.5em;
         position: relative;
         cursor: pointer;
         user-select: none;
         border-radius: 1.5em;
-        padding: 2px;
+        // padding: 2px;
         transition: all 0.4s ease;
-        font-size: 1em;
+        font-size: 1em; // 1em
 
         &:after {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50%;
+            width: 100%; // 50%
             height: 100%;
             border-radius: 50%;
             transition: all 0.4s ease;
@@ -32,16 +32,19 @@
 
         background: lightgray;
         &:after {
-            left: 0;
-            content: "brightness_7";
+            // left: 0;
+            font-family: "ionicons";
+            content: "\f4b6";
+            font-weight: bold;
         }
     }
 
     &:checked + .mh_toggle_btn {
         background: gray;
         &:after {
-            left: 50%;
-            content: "brightness_4";
+            // left: 50%;
+            font-family: "ionicons";
+            content: "\f468";
         }
     }
 }
