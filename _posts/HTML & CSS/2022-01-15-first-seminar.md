@@ -1,7 +1,4 @@
 ---
-permalink: /autolayout/web-02/
-classes: wide
-author_profile: true
 title: "[HTML & CSS] 간단한 페이지 만들기"
 date: 2022-01-15
 categories:
