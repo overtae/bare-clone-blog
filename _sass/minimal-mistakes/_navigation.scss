@@ -610,13 +610,13 @@
       cursor: not-allowed;
     }
 
-    &.first-child {
+    &:first-child {
       @include clearfix;
       float: left;
       text-align: left;
     }
 
-    &.last-child {
+    &:last-child {
       @include clearfix;
       float: right;
       text-align: right;
