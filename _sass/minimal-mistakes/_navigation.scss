@@ -609,6 +609,18 @@
       pointer-events: none;
       cursor: not-allowed;
     }
+
+    &.first-child {
+      @include clearfix;
+      float: left;
+      text-align: left;
+    }
+
+    &.last-child {
+      @include clearfix;
+      float: right;
+      text-align: right;
+    }
   }
 
   .prev_post,
@@ -622,14 +634,12 @@
     font-weight: bold;
   }
 
-  &:first-child,
   .prev_post {
     @include clearfix;
     float: left;
     text-align: left;
   }
 
-  &:last-child,
   .next_post {
     @include clearfix;
     float: right;
