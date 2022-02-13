@@ -36,12 +36,12 @@
 {% if prev_post or next_post %}
   <nav class="pagination_prev_next">
     {% if prev_post %}
-      <a href="{{ site.baseurl }}{{ prev_post.url }}" class="pagination_prev_next--pager"><span class="prev_next">이전 글  &nbsp</span>{{ prev_post.title }}</a>
+      <a href="{{ site.baseurl }}{{ prev_post.url }}" class="pagination_prev_next--pager prev_post"><span class="prev_label">< 이전 글</span><br>{{ prev_post.title }}</a>
     {% else %}
       <a href="#" class="pagination_prev_next--pager disabled-first-child">첫 번째 글입니다</a>
     {% endif %}
     {% if next_post %}
-      <a href="{{ site.baseurl }}{{ next_post.url }}" class="pagination_prev_next--pager"><span class="prev_next">다음 글  &nbsp  </span>{{ next_post.title }}</a>
+      <a href="{{ site.baseurl }}{{ next_post.url }}" class="pagination_prev_next--pager next_post"><span class="next_label">다음 글 ></span><br>{{ next_post.title }}</a>
     {% else %}
       <a href="#" class="pagination_prev_next--pager disabled-last-child ">가장 최근 글입니다</a>
     {% endif %}
