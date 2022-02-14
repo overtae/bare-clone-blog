@@ -52,7 +52,7 @@ feature_row:
 
 <!-- 카테고리 -->
 
-{% include feature_row %}
+<!-- {% include feature_row %} -->
 
 <!-- 최근 포스트 -->
 
