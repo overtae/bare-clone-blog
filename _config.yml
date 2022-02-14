@@ -303,6 +303,12 @@ defaults:
       share: true
       related: true
       sidebar_category: true
+  # category
+  - scope:
+      path: ""
+      type: category
+    values:
+      sidebar_category: true
   # _autolayout
   - scope:
       path: ""

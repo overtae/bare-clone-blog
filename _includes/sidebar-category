@@ -16,21 +16,21 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Swift" %}
-                        <li><a href="/categories/swift" class="">Swift 공부 ({{category[1].size}})</a></li>
+                        <li><a href="/blog/categories/swift/" class="">Swift 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Autolayout" %}
-                        <li><a href="/categories/autolayout" class="">Auto Layout ({{category[1].size}})</a></li>
+                        <li><a href="/blog/categories/autolayout/" class="">Auto Layout ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == ['iOS App'] %}
-                        <li><a href="/categories/iosapp" class="">iOS 앱 개발 ({{category[1].size}})</a></li>
+                    {% if category[0] == "iOS App" %}
+                        <li><a href="/blog/categories/iosapp/" class="">iOS 앱 개발 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -38,22 +38,22 @@
         <span class="nav__sub-title">Python</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == ['Python Study'] %}
-                        <li><a href="/categories/pystudy" class="">Python 공부 ({{category[1].size}})</a></li>
+                    {% if category[0] == "Python Study" %}
+                        <li><a href="/blog/categories/pystudy/" class="">Python 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == ['Python dojang'] %}
-                        <li><a href="/categories/pydojang" class="">코딩 도장 ({{category[1].size}})</a></li>
+                    {% if category[0] == "Python dojang" %}
+                        <li><a href="/blog/categories/pydojang/" class="">코딩 도장 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == ['Python CodeUp'] %}
-                        <li><a href="/categories/pycodeup" class="">코드업 기초 100제 ({{category[1].size}})</a></li>
+                    {% if category[0] == "Python CodeUp" %}
+                        <li><a href="/blog/categories/pycodeup/" class="">코드업 기초 100제 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -61,8 +61,8 @@
         <span class="nav__sub-title">Web</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == ['HTML & CSS'] %}
-                        <li><a href="/categories/htmlcss" class="">HTML & CSS 공부 ({{category[1].size}})</a></li>
+                    {% if category[0] == "HTML & CSS" %}
+                        <li><a href="/blog/categories/htmlcss/" class="">HTML & CSS 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -71,7 +71,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Git" %}
-                        <li><a href="/categories/git" class="">Git & Github ({{category[1].size}})</a></li>
+                        <li><a href="/blog/categories/git/" class="">Git & Github ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -79,4 +79,4 @@
   </ul>
 </nav>
 
-; 참고 : https://ansohxxn.github.io/blog/category/
+<!-- 참고 : https://ansohxxn.github.io/blog/category/ -->
