@@ -1,7 +1,7 @@
 ---
 layout: category
-title: "etc."
-permalink: /categories/etc/
+title: "Git & Github"
+permalink: /categories/git/
 taxonomy: Git
 author_profile: true
 ---

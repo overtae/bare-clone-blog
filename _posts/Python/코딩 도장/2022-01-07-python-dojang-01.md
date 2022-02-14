@@ -3,7 +3,7 @@ permalink: /python/python-01/
 title: "[파이썬 코딩 도장] Unit 3 ~ Unit 12 문제 풀이"
 date: 2022-01-07
 categories:
-  - Python
+  - Python dojang
 tags:
   - python
   - 코딩 도장

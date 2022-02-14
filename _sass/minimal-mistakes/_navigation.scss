@@ -587,7 +587,7 @@
   justify-content: center;
 
   &--pager {
-    display: block;
+    display: inline;
     // padding: 1em 2em;
     width: 50%;
     font-family: $sans-serif;
@@ -609,6 +609,7 @@
       color: rgba($muted-text-color, 0.5);
       pointer-events: none;
       cursor: not-allowed;
+      width: 10em;
     }
 
     &:first-child {

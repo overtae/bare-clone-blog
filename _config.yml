@@ -302,6 +302,7 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar_category: true
   # _autolayout
   - scope:
       path: ""

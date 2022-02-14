@@ -15,5 +15,12 @@
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
   {% endif %}
+
+<!-- 카테고리 사이드바 -->
+
+  {% if page.sidebar_category %}
+    {% include sidebar-category %}
+  {% endif %}
+
   </div>
 {% endif %}
