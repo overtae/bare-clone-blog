@@ -22,10 +22,12 @@ tags:
 예를 들어 s가 "pPoooyY"면 true를 return하고 "Pyy"라면 false를 return합니다.
 
 > 제한 사항
+
 - 문자열 s의 길이 : 50 이하의 자연수
 - 문자열 s는 알파벳으로만 이루어져 있습니다.
 
 > 입출력 예
+
 s | answer | 설명
 --- | --- | ---
 "pPoooyY" | true | 'p'의 개수 2개, 'y'의 개수 2개로 같으므로 true를 return 합니다.
