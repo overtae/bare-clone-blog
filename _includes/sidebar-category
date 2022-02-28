@@ -57,6 +57,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Python Programmers" %}
+                        <li><a href="/blog/categories/pyprogrammers/" class="">프로그래머스 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <!-- Web -->
         <span class="nav__sub-title">Web</span>
             <ul>
