@@ -64,6 +64,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Python Baekjoon" %}
+                        <li><a href="/blog/categories/pybaekjoon/" class="">백준 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <!-- Web -->
         <span class="nav__sub-title">Web</span>
             <ul>
