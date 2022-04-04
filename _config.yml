@@ -305,8 +305,8 @@ defaults:
       sidebar_category: true
   # category
   - scope:
-      path: ""
-      type: categories
+      path: "/categories/"
+      type: category
     values:
       sidebar_category: true
   # _autolayout
