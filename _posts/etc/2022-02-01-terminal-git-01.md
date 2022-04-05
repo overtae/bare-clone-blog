@@ -5,11 +5,11 @@ categories:
   - Git
 tags:
   - git
+exerpt: 간단한 명령어 정리 1
 toc: true
 toc_label: "목차"
 toc_icon: bars
 toc_sticky: true
-exerpt: 간단한 명령어 정리 1
 ---
 
 ### status
