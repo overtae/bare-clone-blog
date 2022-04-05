@@ -1,6 +1,5 @@
 ---
-classes: wide
-title: "[Git & GitHub] Git 터미널 명령어"
+title: "[Git & GitHub] Git 터미널 명령어 1"
 date: 2022-02-01
 categories:
   - Git
@@ -10,7 +9,7 @@ toc: true
 toc_label: "목차"
 toc_icon: bars
 toc_sticky: true
-exerpt: 간단한 명령어 정리
+exerpt: 간단한 명령어 정리 1
 ---
 
 ### status
@@ -25,7 +24,7 @@ $ git status
 
 아래는 `git status`를 했을 때 표시되는 내용이다.
 
-> 브랜치
+> #### 브랜치
 
 ```shell
 On branch master
@@ -35,7 +34,7 @@ Your branch is ahead of 'origin/master' by 1 commit.
 
 현재 master branch라는 것을 알려준다.
 
-> 변경 사항
+> #### 변경 사항
 
 ```shell
 Changes not staged for commit:
@@ -50,7 +49,7 @@ Changes not staged for commit:
 
 이렇게 세 종류 정도가 자주 보게 될 것 같다.
 
-> untracked
+> #### untracked
 
 ```shell
 Untracked files:
@@ -189,7 +188,7 @@ $ git push [저장소 이름] [브랜치 이름]
 
 commit을 통해 Repository로 파일을 옮겼다면 push로 원격 Repository에 올려주는 것이다.
 
-> 예시
+> #### 예시
 
 ```shell
 $ git push origin master
