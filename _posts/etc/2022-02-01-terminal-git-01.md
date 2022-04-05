@@ -120,7 +120,7 @@ $ git add [파일 경로]
 `add` 뒤에 적어준 파일을 staging area에 추가한다.
 
 <details>
-<summary>Staging Area?</summary>
+<summary><h4>Staging Area?</h4></summary>
 <div markdown="1">
 
 Git은 3가지 영역으로 관리된다.
