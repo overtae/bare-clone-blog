@@ -1,0 +1,21 @@
+.category {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+
+.category .category-main {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.category > .category-main > li > div {
+  font-weight: bolder;
+}
+
+.category .category-main .category-sub {
+  list-style: none;
+  padding-left: 0;
+}
