@@ -13,7 +13,7 @@ main:
   # - title: "About"
   #   url: /about/
   - title: "Categories"
-    url: /category-list/
+    url: /categories/
   # - title: "Tags"
   #  url: /tags/
   - title: "Yearly"

@@ -1,0 +1,18 @@
+.sidebar-category {
+  font-size: 1em !important;
+  margin-top: 10px;
+}
+
+.sidebar-category > summary {
+  font-size: 13px;
+  padding-left: 1.3em;
+}
+
+.sidebar-category > summary::after,
+.sidebar-category[open] > summary::after {
+  background: none;
+}
+
+.sidebar-category > summary:before {
+  left: 0.3em;
+}
