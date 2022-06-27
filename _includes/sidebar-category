@@ -46,6 +46,13 @@
           {% endif %} {% endfor %}
         </ul>
         <ul>
+          {% for category in site.categories %} {% if category[0] == "Python Algorithm" %}
+          <li>
+            <a href="/blog/categories/pyalgorithm/" class="">알고리즘 공부 ({{ category[1].size }})</a>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+        <ul>
           {% for category in site.categories %} {% if category[0] == "Python dojang" %}
           <li>
             <a href="/blog/categories/pydojang/" class="">코딩 도장 ({{ category[1].size }})</a>
