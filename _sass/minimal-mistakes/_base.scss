@@ -15,7 +15,6 @@ body {
   font-family: $global-font-family;
   line-height: 1.5;
 
-
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
@@ -113,7 +112,15 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   font-style: italic;
-  border-left: 0.25em solid $primary-color;
+  text-align: center;
+  // border-left: 0.25em solid $primary-color;
+
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    color: #999;
+    content: "\f10e";
+  }
 
   cite {
     font-style: italic;
@@ -367,7 +374,7 @@ input[type="submit"],
 details summary {
   display: block;
   cursor: pointer;
-  outline: 0; 
+  outline: 0;
 }
 
 details summary::-webkit-details-marker {
@@ -396,7 +403,7 @@ details summary::after {
 
 details:hover summary::after {
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
   z-index: -1;
 }
 
@@ -413,8 +420,8 @@ summary:before {
   top: 0.5em;
   left: 1em;
   transform: rotate(0);
-  transform-origin: .2em 50%;
-  transition: .25s transform ease;
+  transform-origin: 0.2em 50%;
+  transition: 0.25s transform ease;
 }
 
 details[open] > summary:before {
