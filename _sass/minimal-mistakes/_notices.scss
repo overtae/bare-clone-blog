@@ -11,7 +11,8 @@
  */
 
 @mixin notice($notice-color) {
-  margin: 2em 0 !important;  /* override*/
+  text-align: left !important;
+  margin: 2em 0 !important; /* override*/
   padding: 1em;
   color: $text-color;
   font-family: $global-font-family;
@@ -55,13 +56,13 @@
   }
 
   code {
-    background-color: mix($background-color, $notice-color, $code-notice-background-mix)
+    background-color: mix($background-color, $notice-color, $code-notice-background-mix);
   }
 
-	pre code {
-		background-color: inherit;
+  pre code {
+    background-color: inherit;
     font-size: 1.25em;
-	}
+  }
 
   ul {
     &:last-child {
