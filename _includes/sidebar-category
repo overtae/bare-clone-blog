@@ -53,6 +53,13 @@
           {% endif %} {% endfor %}
         </ul>
         <ul>
+          {% for category in site.categories %} {% if category[0] == "Python Flask" %}
+          <li>
+            <a href="/blog/categories/pyflask/" class="">플라스크 공부 ({{ category[1].size }})</a>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+        <ul>
           {% for category in site.categories %} {% if category[0] == "Python dojang" %}
           <li>
             <a href="/blog/categories/pydojang/" class="">코딩 도장 ({{ category[1].size }})</a>
