@@ -176,7 +176,7 @@ html 태그 중 form 태그의 method 속성 기본 값은 GET이다.
 def create():
 	content = '''
 	    <form action="/create/" method="POST">
-	        <p><input type="text" name="name" placeholder="name"></p>
+          <p><input type="text" name="name" placeholder="name"></p>
           <p><input type="number" name="age" placeholder="age"></p>
           <p><textarea name="msg" placeholder="msg"></textarea></p>
           <p><input type="submit" value="create"></p>
