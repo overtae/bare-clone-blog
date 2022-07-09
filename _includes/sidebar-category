@@ -94,6 +94,10 @@
           <li>
             <a href="/blog/categories/htmlcss/" class="">HTML & CSS 공부 ({{ category[1].size }})</a>
           </li>
+          {% endif %} {% endfor %} {% for category in site.categories %} {% if category[0] == "JavaScript" %}
+          <li>
+            <a href="/blog/categories/javascript/" class="">JavaScript 공부 ({{ category[1].size }})</a>
+          </li>
           {% endif %} {% endfor %}
         </ul>
         <!-- 기타 -->
