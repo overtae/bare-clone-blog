@@ -113,7 +113,7 @@ let a = 'apple'
 
 `let` 과 `var` 모두 변수를 선언하는 데 쓰이지만 `var`는 오래된 방식이다.
 
-이에 대해서는 [다음 포스팅](...)에서 다루도록 하겠다.
+이에 대해서는 [다음 포스팅](https://overtae.github.io/blog/javascript/let-var-const/)에서 다루도록 하겠다.
 
 </div>
 </details>
