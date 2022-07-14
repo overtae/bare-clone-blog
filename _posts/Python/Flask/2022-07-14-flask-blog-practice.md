@@ -1,6 +1,6 @@
 ---
 title: "[파이썬 플라스크] 블로그 웹 애플리케이션 개발 0.1"
-date: 2022-07-07
+date: 2022-07-14
 categories:
   - Python Flask
 tags:
