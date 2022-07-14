@@ -40,7 +40,7 @@ def about():
 {% endhighlight %}
 
 </div>
-</details><br>
+</details>
 
 이 상태로 앱을 실행한다면 CSS가 하나도 적용되지 않은 페이지가 나올 것이다.
 
@@ -62,7 +62,6 @@ def about():
 <div markdown="1">
 
 {% highlight html linenos %}
-{% raw %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +72,7 @@ def about():
     <meta name="author" content="" />
 
     {# 변화하는 부분 #}
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% raw %}{% block title %}{% endblock %}{% endraw %}</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -87,14 +86,14 @@ def about():
     />
 
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    {% raw %}<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />{% endraw %}
     </head>
 
     <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="{{ url_for('views.home') }}">Taelog</a>
+        {% raw %}<a class="navbar-brand" href="{{ url_for('views.home') }}">Taelog</a>{% endraw %}
         <button
             class="navbar-toggler"
             type="button"
@@ -109,21 +108,21 @@ def about():
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.home') }}">Home</a></li>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.about') }}">About</a></li>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.categories_list') }}">Categories</a></li>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.contact') }}">Contact</a></li>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('auth.signup') }}">Sign Up</a></li>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('auth.login') }}">Login</a></li>
+            {% raw %}<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.home') }}">Home</a></li>{% endraw %}
+            {% raw %}<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.about') }}">About</a></li>{% endraw %}
+            {% raw %}<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.categories_list') }}">Categories</a></li>{% endraw %}
+            {% raw %}<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('views.contact') }}">Contact</a></li>{% endraw %}
+            {% raw %}<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('auth.signup') }}">Sign Up</a></li>{% endraw %}
+            {% raw %}<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('auth.login') }}">Login</a></li>{% endraw %}
             </ul>
         </div>
         </div>
     </nav>
 
     {# 변화하는 부분 #}
-    {% block header %}{% endblock %}
+    {% raw %}{% block header %}{% endblock %}{% endraw %}
     {# 변화하는 부분 #}
-    <div class="content-wrapper">{% block content %}{% endblock %}</div>
+    <div class="content-wrapper">{% raw %}{% block content %}{% endblock %}{% endraw %}</div>
 
     <!-- Footer-->
     <footer class="border-top">
@@ -165,11 +164,10 @@ def about():
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core theme JS-->
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    {% raw %}<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>{% endraw %}
     </body>
 </html>
 
-{% endraw %}
 {% endhighlight %}
 
 </div>
@@ -179,9 +177,9 @@ def about():
 
 ```html
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet"/>
+{% raw %}<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet"/>{% endraw %}
 <!-- Core theme JS-->
-<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% raw %}<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>{% endraw %}
 ```
 
 둘 다 `url_for()`를 사용해 static 폴더 안에 들어있는 것을 확인할 수 있다.
@@ -197,13 +195,12 @@ def about():
 <div markdown="1">
 
 {% highlight html linenos %}
-{% raw %}
 
-{% extends 'base.html' %}
+{% raw %}{% extends 'base.html' %}{% endraw %}
 
-{% block title %}This is home.{% endblock %}
+{% raw %}{% block title %}This is home.{% endblock %}{% endraw %}
 
-{% block header %}
+{% raw %}{% block header %}{% endraw %}
 <!-- Page Header-->
 {% raw %}<header class="masthead" style="background-image: url( {{ url_for('static', filename='assets/img/home-bg.jpg') }} )">{% endraw %}
     <div class="container position-relative px-4 px-lg-5">
@@ -217,9 +214,9 @@ def about():
     </div>
     </div>
 </header>
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 
-{% block content %}
+{% raw %}{% block content %}{% endraw %}
 <!-- Main Content-->
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -284,9 +281,8 @@ def about():
     </div>
     </div>
 </div>
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 
-{% endraw %}
 {% endhighlight %}
 
 </div>
