@@ -384,6 +384,7 @@ details summary::-webkit-details-marker {
 }
 
 details summary {
+  margin-bottom: 1em;
   padding: 0.5em;
   padding-left: 2.2em;
   position: relative;
@@ -432,7 +433,6 @@ details[open] > summary:before {
 
 details div {
   margin-left: 1.3em;
-  margin-top: 0.5em;
   padding-left: 1.3em;
   padding-right: 1.3em;
   border-left: 1px solid rgba($color: lightgrey, $alpha: 0.7);
