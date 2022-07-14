@@ -297,7 +297,7 @@ def about():
 그게 바로 `{% raw %}{% *block* title %}This is home.{% *endblock* %}{% endraw %}`, `{% raw %}{% *block* header %} … {% *endblock* %}{% endraw %}` 이런 아이들이다.
 
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/home.jpg" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/home.JPG" alt="">
   <figcaption>수정을 하고 실행해보면 CSS가 적용된 것을 확인할 수 있다.</figcaption>
 </figure>
 
@@ -397,7 +397,7 @@ def contact():
 <summary>about</summary>
 <div markdown="1">
 
-![about]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/about.jpg){: .align-center}
+![about]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/about.JPG){: .align-center}
 
 </div>
 </details>
@@ -406,7 +406,7 @@ def contact():
 <summary>categories</summary>
 <div markdown="1">
 
-![categories]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/categories.jpg){: .align-center}
+![categories]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/categories.JPG){: .align-center}
 
 </div>
 </details>
@@ -415,7 +415,7 @@ def contact():
 <summary>contact</summary>
 <div markdown="1">
 
-![contact]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/contact.jpg){: .align-center}
+![contact]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/contact.JPG){: .align-center}
 
 </div>
 </details>
@@ -424,7 +424,7 @@ def contact():
 <summary>login</summary>
 <div markdown="1">
 
-![login]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/login.jpg){: .align-center}
+![login]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/login.JPG){: .align-center}
 
 </div>
 </details>
@@ -433,7 +433,7 @@ def contact():
 <summary>signup</summary>
 <div markdown="1">
 
-![signup]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/signup.jpg){: .align-center}
+![signup]({{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/signup.JPG){: .align-center}
 
 </div>
 </details>
