@@ -25,15 +25,30 @@ th {
   padding: 0.5em;
   font-weight: bold;
   text-align: left;
+  border: 1px solid mix(#000, $border-color, 25%);
 }
 
 td {
   padding: 0.5em;
-  border-bottom: 1px solid mix(#000, $border-color, 25%);
+  border: 1px solid mix(#000, $border-color, 25%);
 }
 
 tr,
 td,
 th {
   vertical-align: middle;
+}
+
+/* ==========================================================================
+   FULL WIDTH TABLES
+   ========================================================================== */
+
+.wide-table {
+  padding: 0 5em;
+
+  td,
+  th {
+    width: 50em;
+    padding: 1em;
+  }
 }
