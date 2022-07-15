@@ -1,6 +1,6 @@
 ---
 title: "[파이썬 알고리즘] 스택과 큐, 재귀 함수"
-date: 2022-07-14
+date: 2022-07-15
 categories:
   - Python Algorithm
 tags:
