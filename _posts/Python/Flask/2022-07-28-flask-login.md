@@ -551,3 +551,6 @@ return render_template("~~.html", user=current_user)
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/navbar.png" alt="">
   <figcaption>잘 바뀌었다.</figcaption>
 </figure>
+
+**Notice:** 사용한 코드는 [이 곳](https://github.com/overtae/ifp-flask-study/tree/04-blog-login)에서 확인가능합니다.
+{: .notice--info}
