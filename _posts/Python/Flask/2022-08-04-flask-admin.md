@@ -617,7 +617,7 @@ def test_add_category_and_post(self):
 
 ---
 
-<figure class="align-left">
+<figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/blog/err-01.png" alt="">
 </figure>
 
