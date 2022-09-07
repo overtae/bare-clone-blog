@@ -51,4 +51,134 @@ marshmallow Schema 클래스의 파라미터 중 몇 개만 알아봐보자. —
 
 : 객체가 collection일 경우 True로 설정해야 list로 직렬화 된다.
 
+## 사용 예시
 
+그럼 이제 marshmallow를 사용해보자.
+
+가상환경을 활성화시킨 후 아래를 입력하여 marshmallow를 설치해준다.
+
+```bash
+$ pip install -U marshmallow
+```
+
+이름, 키, 몸무게, 성별, 나이, 주소, 직업 총 7가지의 정보를 갖는 사람 클래스 하나를 정의해주었다.
+
+{% highlight python linenos %}
+class Person:
+    def __init__(self, name, height, weight, gender, age, address, job, ):
+        self.name = name        # 이름
+        self.height = height    # 키
+        self.weight = weight    # 몸무게
+        self.gender = gender    # 성별
+        self.age = age          # 나이
+        self.address = address  # 주소
+        self.job = job          # 직업
+{% endhighlight %}
+
+그리고 임의의 사람 두 명을 구현하였다.
+
+{% highlight python linenos %}
+gildong = Person(
+    '홍길동',
+    '180cm',
+    '80kg',
+    'male',
+    '24',
+    '조선 땅 어느 곳이던 내가 가는 곳이 곧 나의 거처일 것이니...',
+    '의적'
+)
+
+chulsu = Person(
+    '김철수',
+    '110cm',
+    '28kg',
+    'male',
+    '7',
+    '떡잎마을',
+    '유치원생'
+)
+{% endhighlight %}
+
+### 직렬화
+
+---
+
+{% highlight python linenos %}
+from dataclasses import field
+from marshmallow import Schema, fields
+
+
+class PersonSchema(Schema):
+    name = fields.String()
+    height = fields.String()
+    gender = fields.String()
+    age = fields.String()
+
+
+person_data_converter = PersonSchema()
+
+gildong_data = person_data_converter.dump(gildong)
+chulsu_data = person_data_converter.dump(chulsu)
+
+print(gildong_data)
+print(chulsu_data)
+{% endhighlight %}
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/api/02-01.png" alt="">
+  <figcaption>딕셔너리</figcaption>
+</figure>
+
+{% highlight python linenos %}
+import json
+
+
+print(json.dumps(gildong_data, ensure_ascii=False))
+print(json.dumps(chulsu_data, ensure_ascii=False))
+{% endhighlight %}
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/api/02-02.png" alt="">
+  <figcaption>json</figcaption>
+</figure>
+
+### 역직렬화
+
+---
+
+{% highlight python linenos %}
+from marshmallow import Schema, fields
+from serialization import Person
+import json
+
+JSON_minji_data = {"name": "김민지",
+                   "height": "160cm",
+                   "weight": "45kg",
+                   "gender": "female",
+                   "age": 25,
+                   "address": "그대 마음 속..",
+                   "job": "회사원"}
+
+
+class PersonSchema(Schema):
+    name = fields.String()
+    height = fields.String()
+    weight = fields.String()
+    gender = fields.String()
+    age = fields.Integer()
+    address = fields.String()
+    job = fields.String()
+
+
+person_data_converter = PersonSchema()
+
+data = person_data_converter.load(JSON_minji_data)
+Person_object = Person(**data)
+
+print(Person_object.__dict__)
+{% endhighlight %}
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/python/flask/api/02-03.png" alt="">
+  <figcaption>Person_object</figcaption>
+</figure>
