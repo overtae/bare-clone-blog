@@ -1,5 +1,5 @@
 ---
-title: "[파이썬 플라스크] Marshmallow로 Python에서 직럴화/역직렬화 처리하기"
+title: "[파이썬 플라스크] Marshmallow로 Python에서 직렬화/역직렬화 처리하기"
 date: 2022-09-04
 categories:
   - Python Flask
