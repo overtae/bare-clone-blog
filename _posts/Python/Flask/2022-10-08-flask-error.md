@@ -1,6 +1,6 @@
 ---
 title: "[파이썬 플라스크] 삽질 log..."
-date: 2022-10-10
+date: 2022-10-08
 categories:
   - Python Flask
 tags:
