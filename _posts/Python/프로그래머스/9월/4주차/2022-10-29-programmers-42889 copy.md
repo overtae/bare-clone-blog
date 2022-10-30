@@ -45,11 +45,17 @@ tags:
 
 {% highlight python linenos %}
 
+import numpy as np
+
 def solution(N, stages):
-    answer = []
-    return answer
+    s = np.array(stages)
+    result = {x: stages.count(x)/(s >= x).sum() if (s >= x).sum() else 0 for x in range(1, N+1)}
+    return sorted(result, key=lambda x: result[x], reverse=True)
 
 {% endhighlight %}
+
+`numpy` 라이브러리를 써보았다. 사실 효율성을 따진다면 시간이 `1666.59ms` 가 나오기 때문에 좋은 코드는 아니다.
+최대한 짧게 풀려는 강박을 얼른 없애야 할텐데 큰일이다. 짧은 코드보다 가독성이 좋은 코드를 목표로 풀어보아야겠다.
 
 
 **Notice:** 이 게시물은 [programmers.co.kr](https://programmers.co.kr/learn/courses/30/lessons/42889) 사이트를 참고하였습니다.
