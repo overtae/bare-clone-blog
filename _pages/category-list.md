@@ -51,6 +51,14 @@ author_profile: true
             </ul>
         </li>
         <li>
+            <div>Computer Science</div>
+            <ul class="category-sub">
+                <li>
+                    <div><a href="/blog/categories/network/">네트워크</a></div>
+                </li>
+            </ul>
+        </li>
+        <li>
             <div>기타</div>
             <ul class="category-sub">
                 <li>
