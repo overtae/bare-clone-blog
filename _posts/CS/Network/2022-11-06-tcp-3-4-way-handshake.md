@@ -24,7 +24,6 @@ toc_sticky: true
 ## PORT State 정보
 
 | CLOSED      | 포트가 닫힌 상태                                                                      |
-| ----------- | ------------------------------------------------------------------------------------- |
 | LISTEN      | 포트가 열린 상태, 연결 요청 대기 중                                                   |
 | SYN_RECV    | SYNC 요청을 받고 상대방의 응답을 기다리는 중                                          |
 | ESTABLISHED | 포트 연결 상태                                                                        |
@@ -35,7 +34,6 @@ toc_sticky: true
 TCP 헤더에는 CONTROL BIT(플래그 비트)가 존재하며, 각각의 비트는 `URG-ACK-PSH-RST_FIN`을 의미한다.
 
 | URG<br/>Urgent                          | 긴급히 처리 하라는 의미, URG가 설정이 되어있다면 해당 데이터부터 처리.                                                         |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | ACK<br/>Acknowledgement                 | 응답 확인, 패킷을 받았다는 것을 의미. 클라이언트가 보낸 최초의 SYN 패킷 이후에 전송되는 모든 패킷은 이 플래그가 설정되어야 함. |
 | PSH<br/>Push                            | Push 함수, 메모리 자원이 다 차지 않아도 데이터를 던져줌. 주로 URG와 함께 사용.                                                 |
 | RST<br/>Reset                           | 현재 세션에 의해 할당된 메모리 자원을 Null 상태로 만들어 시스템에 반납하라는 의미                                              |
@@ -95,7 +93,7 @@ TCP 통신 이용시, **연결을 해제할 때 사용**하는 과정으로 4번
 ---
 
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/handshake-01.png" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/handshake-02.png" alt="">
   <figcaption><a href="http://www.tcpipguide.com/free/t_TCPConnectionTermination-2.htm">tcpipguide.com</a></figcaption>
 </figure>
 
