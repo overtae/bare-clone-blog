@@ -154,7 +154,7 @@ def delete(cls, post_id, comment_id):
         return {"Error": "게시물을 찾을 수 없습니다."}, 404
 
     # 댓글의 존재 여부 체크
-    if comment:
+    if not comment:
         return {"Error": "댓글을 찾을 수 없습니다."}, 404
 
     if comment.post_id == post_id:
