@@ -17,7 +17,7 @@ toc_sticky: true
 
 블로킹과 논블로킹은 주로 동기와 비동기 개념과 함께 비교되며, 서술된다. 바로 아래와 같은 조합으로 사용되기 때문인데, 이번 포스팅에서는 블로킹과 논블로킹, 동기와 비동기 개념과 함께 아래 조합들도 조금씩 살펴볼 예정이다. 살펴보기에 앞서 한 가지 머리에 입력해야 될 것은, 블로킹/논블로킹은 동기/비동기와 다른 개념이라는 것이다.
 
-<figure class="align-center">
+<figure style="width:280px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-1.png" alt="">
   <figcaption><a href="https://developer.ibm.com/articles/l-async/">https://developer.ibm.com/articles/l-async/</a></figcaption>
 </figure>
@@ -108,7 +108,7 @@ toc_sticky: true
 
 ---
 
-<figure class="align-center">
+<figure style="width:280px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-5.png" alt="">
 </figure>
 
