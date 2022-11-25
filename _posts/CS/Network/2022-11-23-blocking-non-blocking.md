@@ -13,3 +13,55 @@ toc_icon: bars
 toc_sticky: true
 ---
 
+## 개요
+
+블로킹과 논블로킹은 주로 동기와 비동기 개념과 함께 비교되며, 서술된다. 바로 아래와 같은 조합으로 사용되기 때문인데, 이번 포스팅에서는 블로킹과 논블로킹, 동기와 비동기 개념과 함께 아래 조합들도 조금씩 살펴볼 예정이다. 살펴보기에 앞서 한 가지 머리에 입력해야 될 것은, 블로킹/논블로킹은 동기/비동기와 다른 개념이라는 것이다.
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-1.png" alt="">
+  <figcaption><a href="https://developer.ibm.com/articles/l-async/">https://developer.ibm.com/articles/l-async/</a></figcaption>
+</figure>
+
+## Blocking, Non-blocking
+
+프로세스의 유휴 상태에 대한 개념으로, **제어권**을 바로 반환하는지 갖고 있는지가 관심사이다.
+
+**💡 유휴 상태?** 어떠한 프로그램에 의해서도 사용되지 않는 상태 — [참고](https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%9C%B4_(CPU))
+{: .notice--success}
+
+### Blocking
+
+: 자신의 작업을 진행하다가 다른 주체의 작업이 시작되면 다른 작업이 끝날 때까지 기다렸다가 자신의 작업을 시작하는 것
+
+---
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-2.png" alt="">
+</figure>
+
+1️⃣ A 함수가 B 함수를 호출하며 B 함수에게 제어권을 넘긴다.
+
+2️⃣ B 함수는 제어권을 갖고 함수를 실행한다.
+
+이때, A 함수는 제어권이 없는 상태가 되며 다른 일을 할 수 없다.
+
+3️⃣ B 함수의 실행이 끝나면 A 함수에게 제어권을 돌려준다.
+
+정리해보자면, 호출된 함수는 자신의 작업이 종료되기 전까지 *호출한 함수에게 제어권을 돌려주지 않는다.*
+
+### Non-blocking
+
+: 다른 주체의 작업에 관련 없이 자신의 작업을 하는 것
+
+---
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-3.png" alt="">
+</figure>
+
+1️⃣ A 함수가 B 함수를 호출하고, B 함수가 실행되지만 제어권을 바로 돌려준다.
+
+2️⃣ A 함수는 제어권을 갖고 있기 때문에 자신의 작업을 계속 한다.
+
+정리하자면, 호출된 함수의 *작업 완료 여부에 상관 없이* 호출한 함수는 다른 일을 진행할 수 있다.
+
