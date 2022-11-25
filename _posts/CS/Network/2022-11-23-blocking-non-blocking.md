@@ -43,7 +43,7 @@ toc_sticky: true
 
 2️⃣ B 함수는 제어권을 갖고 함수를 실행한다.
 
-이때, A 함수는 제어권이 없는 상태가 되며 다른 일을 할 수 없다.
+    이때, A 함수는 제어권이 없는 상태가 되며 다른 일을 할 수 없다.
 
 3️⃣ B 함수의 실행이 끝나면 A 함수에게 제어권을 돌려준다.
 
@@ -65,3 +65,72 @@ toc_sticky: true
 
 정리하자면, 호출된 함수의 *작업 완료 여부에 상관 없이* 호출한 함수는 다른 일을 진행할 수 있다.
 
+## Synchronous, Asynchronous
+
+프로세스의 작업 순서 보장에 대한 개념으로, **함수의 작업 완료 여부를 확인하는지**에 따라 **작업 순서**를 보장 하는가가 관심사이다.
+
+<details open>
+<summary>📝 토막 상식</summary>
+<div markdown="1">
+
+✏️ **syn** — together
+
+✏️ **chrono** — time
+
+✅ Synchronous: 함께 시간을 맞춘다.
+
+✅ Asynchronous (부정형): 시간을 맞추지 않는다.
+
+</div>
+</details>
+    
+
+### 동기, Synchronous
+
+: 현재 작업의 처리가 끝나는 시간에 맞춰 다음 작업을 요청하는 것
+
+---
+
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-4.png" alt="">
+</figure>
+
+각 작업의 주체들은 **끝나는 시간과 시작하는 시간**(왼쪽)을 맞추거나, **시작하는 시간과 끝나는 시간**(오른쪽)을 맞춘다.
+
+✅ 호출된 함수가 결과를 반환할 때까지 대기
+
+✅ 호출한 함수의 리턴값과 **작업 완료 여부를 계속 확인하며 신경씀**
+
+### 비동기, Asynchronous
+
+: 현재 작업의 응답이 끝나지 않은 상태에서 다음 작업을 요청하는 것
+
+---
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-5.png" alt="">
+</figure>
+
+작업을 수행하는 주체의 시작과 끝나는 시간에 관계없이 각자 별도의 시작과 끝나는 시간을 지닌다. 즉, 서로의 시작과 종료 시간이 영향을 주지 않는다.
+
+✅ 호출한 함수는 호출된 함수의 **작업 완료 여부에 신경쓰지 않음**
+
+    — *작업 요청 시 요청의 결과값을 간접적으로 받는데, 이는 return 값과 다를 수 있다.*
+
+✅ 함수를 호출할 때 콜백 함수를 전달하여 호출된 함수의 작업이 완료되었다면 콜백 함수를 실행
+
+<aside>
+💡 **콜백 함수?** 다른 함수의 인자로 들어간 함수로서 특정 시점에 실행되는 함수로, **작업 완료 여부를 신경**쓴다.
+
+</aside>
+
+## 조합
+
+위에서 알아본 각각의 특징들로 조합을 해본다면, 아래와 같겠다.
+
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/network/bnb-6.png" alt="">
+</figure>
+
+이때, Async-blocking(왼쪽 아래)의 경우 Sync-blocking(왼쪽 위)과 성능 차이가 거의 없어 사용하는 경우가 거의 없다고 한다.
