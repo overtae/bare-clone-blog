@@ -20,73 +20,102 @@
         <ul>
           {% for category in site.categories %} {% if category[0] == "Swift" %}
           <li>
-            <a href="/blog/categories/swift/" class="">Swift 공부 ({{ category[1].size }})</a>
+            <a href="/blog/categories/swift/" class=""
+              >Swift 공부 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Autolayout" %}
+          {% for category in site.categories %} {% if category[0] ==
+          "Autolayout" %}
           <li>
-            <a href="/blog/categories/autolayout/" class="">Auto Layout ({{ category[1].size }})</a>
+            <a href="/blog/categories/autolayout/" class=""
+              >Auto Layout ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "iOS App" %}
+          {% for category in site.categories %} {% if category[0] == "iOS App"
+          %}
           <li>
-            <a href="/blog/categories/iosapp/" class="">iOS 앱 개발 ({{ category[1].size }})</a>
+            <a href="/blog/categories/iosapp/" class=""
+              >iOS 앱 개발 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
-        
+
         <!-- Python -->
         <span class="nav__sub-title">Python</span>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python Study" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          Study" %}
           <li>
-            <a href="/blog/categories/pystudy/" class="">Python 공부 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pystudy/" class=""
+              >Python 공부 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python Algorithm" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          Algorithm" %}
           <li>
-            <a href="/blog/categories/pyalgorithm/" class="">알고리즘 공부 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pyalgorithm/" class=""
+              >알고리즘 공부 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python Flask" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          Flask" %}
           <li>
-            <a href="/blog/categories/pyflask/" class="">플라스크 공부 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pyflask/" class=""
+              >플라스크 공부 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python dojang" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          dojang" %}
           <li>
-            <a href="/blog/categories/pydojang/" class="">코딩 도장 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pydojang/" class=""
+              >코딩 도장 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python CodeUp" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          CodeUp" %}
           <li>
-            <a href="/blog/categories/pycodeup/" class="">코드업 기초 100제 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pycodeup/" class=""
+              >코드업 기초 100제 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python Programmers" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          Programmers" %}
           <li>
-            <a href="/blog/categories/pyprogrammers/" class="">프로그래머스 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pyprogrammers/" class=""
+              >프로그래머스 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Python Baekjoon" %}
+          {% for category in site.categories %} {% if category[0] == "Python
+          Baekjoon" %}
           <li>
-            <a href="/blog/categories/pybaekjoon/" class="">백준 ({{ category[1].size }})</a>
+            <a href="/blog/categories/pybaekjoon/" class=""
+              >백준 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
@@ -94,14 +123,19 @@
         <!-- Web -->
         <span class="nav__sub-title">Web</span>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "HTML & CSS" %}
+          {% for category in site.categories %} {% if category[0] == "HTML &
+          CSS" %}
           <li>
-            <a href="/blog/categories/htmlcss/" class="">HTML & CSS 공부 ({{ category[1].size }})</a>
+            <a href="/blog/categories/htmlcss/" class=""
+              >HTML & CSS 공부 ({{ category[1].size }})</a
+            >
           </li>
-          {% endif %} {% endfor %}
-          {% for category in site.categories %} {% if category[0] == "JavaScript" %}
+          {% endif %} {% endfor %} {% for category in site.categories %} {% if
+          category[0] == "JavaScript" %}
           <li>
-            <a href="/blog/categories/javascript/" class="">JavaScript 공부 ({{ category[1].size }})</a>
+            <a href="/blog/categories/javascript/" class=""
+              >JavaScript 공부 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
@@ -109,9 +143,19 @@
         <!-- CS Study -->
         <span class="nav__sub-title">Computer Science</span>
         <ul>
-          {% for category in site.categories %} {% if category[0] == "Network" %}
+          {% for category in site.categories %} {% if category[0] == "Network"
+          %}
           <li>
-            <a href="/blog/categories/network/" class="">네트워크 ({{ category[1].size }})</a>
+            <a href="/blog/categories/network/" class=""
+              >네트워크 ({{ category[1].size }})</a
+            >
+          </li>
+          {% endif %} {% endfor %} {% for category in site.categories %} {% if
+          category[0] == "Database" %}
+          <li>
+            <a href="/blog/categories/network/" class=""
+              >데이터베이스 ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
@@ -121,12 +165,16 @@
         <ul>
           {% for category in site.categories %} {% if category[0] == "Git" %}
           <li>
-            <a href="/blog/categories/git/" class="">Git & Github ({{ category[1].size }})</a>
+            <a href="/blog/categories/git/" class=""
+              >Git & Github ({{ category[1].size }})</a
+            >
           </li>
-          {% endif %} {% endfor %}
-          {% for category in site.categories %} {% if category[0] == "Programming" %}
+          {% endif %} {% endfor %} {% for category in site.categories %} {% if
+          category[0] == "Programming" %}
           <li>
-            <a href="/blog/categories/programming/" class="">Programming ({{ category[1].size }})</a>
+            <a href="/blog/categories/programming/" class=""
+              >Programming ({{ category[1].size }})</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
