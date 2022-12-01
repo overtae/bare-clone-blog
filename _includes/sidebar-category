@@ -153,7 +153,7 @@
           {% endif %} {% endfor %} {% for category in site.categories %} {% if
           category[0] == "Database" %}
           <li>
-            <a href="/blog/categories/network/" class=""
+            <a href="/blog/categories/database/" class=""
               >데이터베이스 ({{ category[1].size }})</a
             >
           </li>
