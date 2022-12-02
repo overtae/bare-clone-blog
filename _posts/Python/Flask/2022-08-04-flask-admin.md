@@ -458,7 +458,7 @@ class Category(db.Model):
 
 {% raw %}{% block header %}{% endraw %}
     <header class="masthead"
-            style="background-image: url('{{ url_for('static', filename='assets/img/create-bg.jpg') }}'); height: 130px;">
+            style="background-image: url('{% raw %}{{ url_for('static', filename='assets/img/create-bg.jpg') }}{% endraw %}'); height: 130px;">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
