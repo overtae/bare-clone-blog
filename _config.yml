@@ -12,27 +12,27 @@
 
 # theme: "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: 'air' # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 dark_theme_toggle: true
-after_footer_scripts: "assets/js/custom/dark-theme.js"
+after_footer_scripts: 'assets/js/custom/dark-theme.js'
 
 # Site Settings
-locale: "ko-KR"
-title: "What I Studied"
-title_separator: "-"
+locale: 'ko-KR'
+title: 'What I Studied'
+title_separator: '-'
 subtitle: # site tagline that appears below site title in masthead
-name: "taeyoung"
-description: "공부한 것들을 올리고 있습니다."
-url: "https://overtae.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl: "/blog" # the subpath of your site, e.g. "/blog"
-repository: "overtae/blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+name: 'taeyoung'
+description: '공부한 것들을 올리고 있습니다.'
+url: 'https://overtae.github.io' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl: '/blog' # the subpath of your site, e.g. "/blog"
+repository: 'overtae/blog' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title: "태영이의 공부방" # overrides the website title displayed in the masthead, use " " for no title
+logo: '/assets/images/logo.png' # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title: '태영이의 공부방' # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
 comments:
-  provider: "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider: 'disqus' # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname: overtae # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -95,24 +95,24 @@ social:
 
 # Analytics
 analytics:
-  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: 'google-gtag' # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id: "G-M1ZVNW742W"
+    tracking_id: 'G-M1ZVNW742W'
     anonymize_ip: true # true, false (default)
 
 # Site Author
 author:
-  name: "태영이"
-  avatar: "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "안녕하세요 :)"
-  location: "Seoul, Korea"
+  name: '태영이'
+  avatar: '/assets/images/bio-photo.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio: '안녕하세요 :)'
+  location: 'Seoul, Korea'
   email:
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:rlaxodud911@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
+    - label: 'Email'
+      icon: 'fas fa-fw fa-envelope-square'
+      url: 'mailto:rlaxodud911@gmail.com'
+    - label: 'Website'
+      icon: 'fas fa-fw fa-link'
       # url: "https://your-website.com"
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
@@ -120,12 +120,12 @@ author:
     #- label: "Facebook"
     #  icon: "fab fa-fw fa-facebook-square"
     # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/overtae"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/ttaaaaeeeeeeee"
+    - label: 'GitHub'
+      icon: 'fab fa-fw fa-github'
+      url: 'https://github.com/overtae'
+    - label: 'Instagram'
+      icon: 'fab fa-fw fa-instagram'
+      url: 'https://instagram.com/ttaaaaeeeeeeee'
 
 # Site Footer
 footer:
@@ -136,9 +136,9 @@ footer:
     #- label: "Facebook"
     #  icon: "fab fa-fw fa-facebook-square"
     # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/overtae"
+    - label: 'GitHub'
+      icon: 'fab fa-fw fa-github'
+      url: 'https://github.com/overtae'
     #- label: "GitLab"
     #  icon: "fab fa-fw fa-gitlab"
     # url:
@@ -154,8 +154,8 @@ include:
   - .htaccess
   - _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
+  - '*.sublime-project'
+  - '*.sublime-workspace'
   - vendor
   - .asset-cache
   - .bundle
@@ -183,8 +183,8 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding: 'utf-8'
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 
 # Conversion
 markdown: kramdown
@@ -200,6 +200,8 @@ kramdown:
   # syntax_highlighter_opts:
   #   block:
   #     line_numbers: true
+  syntax_highlighter_opts:
+    disable: true
   input: GFM
   hard_wrap: false
   auto_ids: true
@@ -207,7 +209,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: true
+  # enable_coderay: true
 
 # Sass/SCSS
 sass:
@@ -293,7 +295,7 @@ collections:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: ''
       type: posts
     values:
       layout: single
@@ -303,19 +305,19 @@ defaults:
       share: true
       related: true
       toc: true
-      toc_label: "목차"
+      toc_label: '목차'
       toc_icon: bars
       toc_sticky: true
       sidebar_category: true
   # category
   - scope:
-      path: "/categories/"
+      path: '/categories/'
       type: category
     values:
       sidebar_category: true
   # _autolayout
   - scope:
-      path: ""
+      path: ''
       type: autolayout
     values:
       layout: single
@@ -325,7 +327,7 @@ defaults:
       comments: true
   # web
   - scope:
-      path: ""
+      path: ''
       type: web
     values:
       layout: single
@@ -335,7 +337,7 @@ defaults:
       comments: true
   # python
   - scope:
-      path: ""
+      path: ''
       type: python
     values:
       layout: single
@@ -345,7 +347,7 @@ defaults:
       comments: true
   # iosapp
   - scope:
-      path: ""
+      path: ''
       type: iosapp
     values:
       layout: single
@@ -355,7 +357,7 @@ defaults:
       comments: true
   # swift
   - scope:
-      path: ""
+      path: ''
       type: swift
     values:
       layout: single
