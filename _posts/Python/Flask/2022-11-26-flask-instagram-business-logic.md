@@ -17,7 +17,7 @@ excerpt: "Flask Instagram Clone Coding"
 
 ### 게시물 수정
 
-{% highlight python linenos %}
+```
 @classmethod
 @jwt_required()
 def put(cls, id):
@@ -45,7 +45,8 @@ def put(cls, id):
         return {"Error": "게시물은 작성자만 수정할 수 있습니다."}, 403
 
     return post_schema.dump(post), 200
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 1. 입력한 데이터 검증
 2. 게시물 존재 여부 체크
@@ -53,7 +54,7 @@ def put(cls, id):
 
 ### 유저 생성
 
-{% highlight python linenos %}
+```
 def post(self):
         data = request.get_json()
 				# 입력 데이터 검증
@@ -80,7 +81,8 @@ def post(self):
 
             user.save_to_db()
             return {"success": f"{user.username} 님, 가입을 환영합니다!"}, 201
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 1. 입력 데이터 검증
 2. 중복된 이름인지 체크
