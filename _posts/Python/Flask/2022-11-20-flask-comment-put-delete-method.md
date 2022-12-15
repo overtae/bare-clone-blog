@@ -28,13 +28,12 @@ DELETE  | posts/<id>/comments/<id>/ => 특정 게시물의 특정 댓글을 삭�
 
 먼저 현재의 PUT 메서드는 아래와 같다.
 
-{% highlight python linenos %}
-
+```
 @classmethod
 def put(cls, post_id, comment_id):
     pass
-
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 위 메서드를 바탕으로, 댓글 수정 기능 구현 시에 고려해야 할 사항은 아래와 같을 것이다.
 
@@ -49,8 +48,7 @@ def put(cls, post_id, comment_id):
 
 다양한 방법이 있겠지만 아래와 같이 구현해보았다.
 
-{% highlight python linenos %}
-
+```
 @classmethod
 @jwt_required()
 def put(cls, post_id, comment_id):
@@ -87,8 +85,8 @@ def put(cls, post_id, comment_id):
         return {"Error": "댓글은 작성자만 수정할 수 있습니다."}, 403
 
     return comment_schema.dump(comment), 200
-
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 게시물과 댓글이 존재하는지 확인한 후,
 
@@ -102,8 +100,7 @@ def put(cls, post_id, comment_id):
 
 로 떠서.. 수정이 필요해보인다. 아마 아래와 같지 않을까 싶다.
 
-{% highlight python linenos %}
-
+```
 if comment.post_id == post_id:
     if comment.author_id == author_id:
         comment.update_to_db(comment_json)
@@ -111,20 +108,19 @@ if comment.post_id == post_id:
         return {"Error": "댓글은 작성자만 수정할 수 있습니다."}, 403
 else:
     return {"Error": "댓글을 찾을 수 없습니다."}, 404
-
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 ## DELETE 메서드 구현 과정
 
 현재 DELETE 메서드부터 확인해보자.
 
-{% highlight python linenos %}
-
+```
 @classmethod
 def delete(cls, post_id, comment_id):
     pass
-
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 댓글 삭제도 수정과 비슷하게 구현하면 될 것이다.
 
@@ -134,8 +130,7 @@ def delete(cls, post_id, comment_id):
 
 정답이 아니라는 느낌이 들긴하지만, 냅다 구현해보았다.
 
-{% highlight python linenos %}
-
+```
 @classmethod
 @jwt_required()
 def delete(cls, post_id, comment_id):
@@ -165,8 +160,8 @@ def delete(cls, post_id, comment_id):
             return {"Error": "댓글은 작성자만 삭제할 수 있습니다."}, 403
     else:
         return {"Error": "댓글을 찾을 수 없습니다."}, 404
-
-{% endhighlight %}
+```
+{: .language-python .line-numbers}
 
 사실 잘 모르겠다...ㅠ
 
