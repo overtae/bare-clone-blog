@@ -7,7 +7,7 @@ tags:
   - Computer Science
   - B-Tree
   - B+Tree
-excerpt: "균형 이진 탐색 트리에 대해 알아보자자"
+excerpt: "균형 이진 탐색 트리에 대해 알아보자"
 toc: true
 toc_label: "목차"
 toc_icon: bars
