@@ -66,7 +66,7 @@ toc_sticky: true
 
 트랜잭션은 아래 5가지의 상태로 구분할 수 있다.
 
-<figure class="align-center" style="width: 1000px">
+<figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/ts.png" alt="">
 </figure>
 

@@ -41,7 +41,7 @@ toc_sticky: true
 
 어떤 테이블의 속성 A, B에 대해 A값에 의해 B값이 유일하게 정해지는 관계를 종속성이라 하며 아래와 같이 표현된다.
 
-<figure class="align-center" style="width: 750px">
+<figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/nf.png" alt="">
 </figure>
 
