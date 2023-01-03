@@ -98,7 +98,7 @@ Commit 요청이 들어오면 부분완료 상태가 되고, 이후에 Commit �
 
 
 <details open>
-<summary><h3>참고: 병행제어</h3></summary>
+<summary>참고: 병행제어</summary>
 <div markdown="1">
 
 ### 필요성
