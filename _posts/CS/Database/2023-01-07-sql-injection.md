@@ -18,13 +18,13 @@ toc_sticky: true
 입력창에 값을 입력한다면, `SELECT * FROM user WHERE userId = 'ID 입력값' and userPw = 'PW 입력값'` 의 질의문이 실행되는 아래와 같은 로그인 화면이 있다고 가정해보자.
 
 <figure style="width: 200px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si1" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si1.png" alt="">
 </figure>
 
 위 화면에서, 한 사용자가 악의를 갖고 관리자 계정 로그인을 아래와 같이 시도하였다.
 
 <figure style="width: 200px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si2" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si2.png" alt="">
 </figure>
 
 위 질의문 마지막 부분인 `userPw = '' or '' = ''` 를 본다면, 비밀번호 값에는 null 값이 들어갔지만 or 뒤 구문이 `null = null` 로 항상 참이 되면서 결국 질의문 전체가 참이 된다. 따라서 사용자는 관리자 계정의 아이디만 알고 비밀번호를 몰라도 로그인이 가능하다.
@@ -34,7 +34,7 @@ toc_sticky: true
 ## 위험성
 
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si3" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si3.png" alt="">
   <figcaption><a href="https://owasp.org/www-project-top-ten/">owasp.org</a></figcaption>
 </figure>
 
