@@ -23,7 +23,7 @@ toc_sticky: true
 
 위 화면에서, 한 사용자가 악의를 갖고 관리자 계정 로그인을 아래와 같이 시도하였다.
 
-<figure style="width: 200px" class="align-center">
+<figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cs/database/si2.png" alt="">
 </figure>
 
@@ -46,15 +46,12 @@ OWASP 에서 발표한 주요 보안 취약점 목록이다. 순위가 내려가
 
 : 논리적 에러 이용
 
----
-
 가장 대중적인 방법으로 위에서 말한 예시와 같은 방법이다.
+
 
 ### UNION based SQL Injection
 
 : UNION 명령어 이용
-
----
 
 UNION은 두 쿼리문의 결과를 연결한다. — [참고](https://learn.microsoft.com/ko-kr/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-ver16)
 
@@ -64,21 +61,19 @@ UNION은 두 쿼리문의 결과를 연결한다. — [참고](https://learn.mic
 SELECT name FROM user WHERE id = 123 UNION SELECT password FROM user
 ```
 
+
 ### Blind SQL Injection — Boolean based
 
 : 에러 메시지 이용
-
----
 
 데이터베이스로부터 참과 거짓의 정보만 알 수 있을 때 (데이터베이스 메시지가 보이지 않을 때) 사용한다. 
 
 임의의 숫자와 계속 비교하는 질의를 보내 정보를 얻어낸다.
 
+
 ### Blind SQL Injection — Time based
 
 : 응답 시간 이용
-
----
 
 데이터베이스로부터 참과 거짓의 정보도 알 수 없을 때 사용한다.
 
@@ -88,15 +83,11 @@ SLEEP 이나 BENCHMARK 등을 사용해 시간을 지연시켜 데이터베이�
 
 : 저장 프로시저 이용
 
----
-
 Stored Procedure, 저장 프로시저는 쿼리문들의 집합을 말한다. 이 저장 프로시저에 대한 접근 권한을 갖고 특정 명령을 실행 시켜 서버에 피해를 입힌다.
 
 ### Mass SQL Injection
 
 : 기존 SQL Injection 의 확장
-
----
 
 한번의 공격으로 다량의 데이터베이스가 조작되어 치명적인 피해를 입힌다. 
 
