@@ -115,6 +115,10 @@
           <li>
             <a href="/blog/categories/database/" class="">데이터베이스 ({{ category[1].size }})</a>
           </li>
+          {% endif %} {% endfor %} {% for category in site.categories %} {% if category[0] == "Operating System" %}
+          <li>
+            <a href="/blog/categories/os/" class="">운영체제 ({{ category[1].size }})</a>
+          </li>
           {% endif %} {% endfor %}
         </ul>
 
