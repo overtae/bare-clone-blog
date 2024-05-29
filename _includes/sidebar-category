@@ -133,6 +133,10 @@
           <li>
             <a href="/blog/categories/programming/" class="">Programming ({{ category[1].size }})</a>
           </li>
+          {% endif %} {% endfor %} {% for category in site.categories %} {% if category[0] == "Today I Learned" %}
+          <li>
+            <a href="/blog/categories/til/" class="">TIL ({{ category[1].size }})</a>
+          </li>
           {% endif %} {% endfor %}
         </ul>
       </li>
