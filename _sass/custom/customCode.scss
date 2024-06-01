@@ -10,6 +10,8 @@ div.code-toolbar > .toolbar {
     background: none;
     color: $base0a;
     box-shadow: none;
+    user-select: none;
+    cursor: default;
   }
 
   .copy-to-clipboard-button {
@@ -19,8 +21,26 @@ div.code-toolbar > .toolbar {
     width: 3em;
     height: 3em;
 
-    > span {
-      display: none;
+    & span {
+      position: fixed;
+      left: 50%;
+      bottom: -5%;
+      transform: translateX(-50%);
+
+      background: mix($primary-color, rgba(0, 0, 0, 0), 50%);
+      border-radius: 50px;
+      padding: 10px 30px;
+
+      font-weight: 700;
+      color: white;
+
+      transition: ease all 0.3s;
+      opacity: 0;
+    }
+
+    &[data-copy-state='copy-success'] > span {
+      opacity: 1;
+      bottom: 5%;
     }
 
     &::after {
@@ -92,8 +112,4 @@ pre[class*='language-'].line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
-}
-
-.token.comment::after {
-  content: none;
 }
